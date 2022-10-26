@@ -1,27 +1,41 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using System.Collections;
-//using UnityEngine.InputSystem;
 
 public class SceneJump : MonoBehaviour
 {
-    //PlayerInput input;
     [SerializeField]
     private Animator transition;
     [SerializeField]
     private float transitionTime;
+    [SerializeField]
+    private bool asyncLoading;
 
-    private bool chanching = false;
+    public static SceneJump instance;
+
+    private bool changing = false;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        } 
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {
-        chanching = false;
+        changing = false;
     }
     public void ChangeScene(int index)
     {
-        if (!chanching)
+        if (!changing)
         {
-            chanching = true;
+            changing = true;
             Time.timeScale = 1;
             transition.SetTrigger("Start");
             StartCoroutine(LoadLevel(index));
@@ -33,13 +47,23 @@ public class SceneJump : MonoBehaviour
 
         Scene activeScene = SceneManager.GetActiveScene();
 
-        //SceneManager.LoadScene(levelIndex);
-        AsyncOperation asyncLoadLevel = SceneManager.LoadSceneAsync(levelIndex, LoadSceneMode.Single);
+        if (asyncLoading)
+        {
+            AsyncOperation asyncLoadLevel = SceneManager.LoadSceneAsync(levelIndex, LoadSceneMode.Single);
 
-        // Wait until the level finishes loading
-        while (!asyncLoadLevel.isDone)
-            yield return null;
-        // Wait a frame so every Awake and Start method is called
-        yield return new WaitForEndOfFrame();
+            // Wait until the level finishes loading
+            while (!asyncLoadLevel.isDone)
+                yield return null;
+
+            // Wait a frame so every Awake and Start method is called
+            yield return new WaitForEndOfFrame();
+        }
+        else
+        {
+            SceneManager.LoadScene(levelIndex);
+        }
+
+        
+        
     }
 }

@@ -73,6 +73,8 @@ public class RagdollActivate : MonoBehaviour
                 bloodParticles.Play();
 
                 ActivateRagdoll();
+
+                SceneJump.instance.ChangeScene(1);
             }
         }
     }
