@@ -6,6 +6,8 @@ TagManager:
   tags:
   - RightHand
   - LeftHand
+  - Killable
+  - Killer
   layers:
   - Default
   - TransparentFX
