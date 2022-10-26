@@ -46,7 +46,7 @@ public class RagdollActivate : MonoBehaviour
 
         foreach (Collider collider in ragdollParts)
         {
-            collider.isTrigger = false;
+            collider.isTrigger = false; 
             collider.attachedRigidbody.velocity = Vector3.zero;
             collider.attachedRigidbody.useGravity = true;
         }
