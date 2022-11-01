@@ -1,9 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RagdollActivate : MonoBehaviour
 {
+    public GameController gameController;
+    
     [SerializeField] Animator ragdollAnimator;
 
     [SerializeField] GameObject ragdollRoot;
@@ -74,7 +78,8 @@ public class RagdollActivate : MonoBehaviour
 
                 ActivateRagdoll();
 
-                SceneJump.instance.ChangeScene(1);
+                gameController.ChangeScene(SceneController.Scene.scene_1);
+                //SceneJump.instance.ChangeScene(1);
             }
         }
     }
