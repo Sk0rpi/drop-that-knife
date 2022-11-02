@@ -8550,7 +8550,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1565040310}
-  - component: {fileID: 1565040309}
   m_Layer: 0
   m_Name: BLINKS
   m_TagString: Untagged
@@ -8558,24 +8557,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1565040309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1565040308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b8ac844ec93e2740a10c7072dd0b998, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blinks:
-  - {fileID: 521451334}
-  - {fileID: 823505598}
-  - {fileID: 674313266}
-  - {fileID: 862236562}
-  - {fileID: 1254919270}
 --- !u!4 &1565040310
 Transform:
   m_ObjectHideFlags: 0
