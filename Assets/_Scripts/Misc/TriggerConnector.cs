@@ -6,7 +6,6 @@ public class TriggerConnector : MonoBehaviour
 {
     public bool isTimeTrigger;
     public int timeInSec;
-    public bool isAliveTrigger;
-    public bool isMovementTrigger;
+    public bool isObjectTrigger;
     public GameObject toObserve;
 }

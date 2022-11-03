@@ -9,8 +9,7 @@ public class GameController : MonoBehaviour
     // TriggerCase Const's
     private const int NONE = 0;
     private const int TIME = 1;
-    private const int LIFE = 2;
-    private const int MOVE = 3;
+    private const int OBJECT = 2;
     
     public List<GameObject> blinks;
     private int _blinkCounter = 0;
@@ -19,7 +18,7 @@ public class GameController : MonoBehaviour
     public TMP_Text debug_Timer;
     private Timer _timer;
     private int _triggerCase = NONE;
-    private Trigger _trigger;
+    private TriggerValue _triggerValue;
 
     private void Start()
     {
@@ -60,18 +59,10 @@ public class GameController : MonoBehaviour
             }
             
             // Check if the trigger is lifebased
-            else if (triggerConnector.isAliveTrigger)
+            else if (triggerConnector.isObjectTrigger)
             {
-                // If so, set the TriggerCase to 2 (LIFE) and set the intern trigger GameObject (rigbody)
-                _triggerCase = LIFE;
-                Set_GameObject_Trigger(triggerConnector.toObserve);
-            }
-            
-            // Check if the trigger is movementbased
-            else if (triggerConnector.isMovementTrigger)
-            {
-                // If so, set the TriggerCase to 3 (MOVE) and set the intern trigger GameObject (walkable Area)
-                _triggerCase = MOVE;
+                // If so, set the TriggerCase to 2 (OBJECT) and set the intern trigger GameObject
+                _triggerCase = OBJECT;
                 Set_GameObject_Trigger(triggerConnector.toObserve);
             }
 
@@ -95,9 +86,9 @@ public class GameController : MonoBehaviour
 
     private void Set_GameObject_Trigger(GameObject gameObject)
     {
-        if (gameObject.GetComponent(typeof(Trigger)) != null)
+        if (gameObject.GetComponent(typeof(TriggerValue)) != null)
         {
-            _trigger = gameObject.GetComponent(typeof(Trigger)) as Trigger;
+            _triggerValue = gameObject.GetComponent(typeof(TriggerValue)) as TriggerValue;
         }
 
         else
@@ -133,24 +124,11 @@ public class GameController : MonoBehaviour
             }
         }
         
-        // Check if the triggerCase is the LIFE trigger
-        else if (_triggerCase == LIFE)
+        // Check if the triggerCase is the OBJECT trigger
+        else if (_triggerCase == OBJECT)
         {
             // If so, check if the gameObject is triggered
-            if (_trigger.triggered)
-            {
-                // If so, set the triggerCase to NONE
-                _triggerCase = NONE;
-                // And call the blink change
-                Trigger_Blink_Change();
-            }
-        }
-        
-        // Check if the triggerCase is the MOVE trigger
-        else if (_triggerCase == MOVE)
-        {
-            // If so, check if the gameObject is triggered
-            if (_trigger.triggered)
+            if (_triggerValue.triggered)
             {
                 // If so, set the triggerCase to NONE
                 _triggerCase = NONE;
