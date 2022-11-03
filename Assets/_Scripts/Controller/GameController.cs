@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
@@ -11,7 +12,7 @@ public class GameController : MonoBehaviour
     private const int TIME = 1;
     private const int OBJECT = 2;
     
-    public List<GameObject> blinks;
+    private List<GameObject> blinks = new List<GameObject>();
     private int _blinkCounter = 0;
     public Animator animator;
     public TMP_Text debug_Blink;
@@ -20,8 +21,20 @@ public class GameController : MonoBehaviour
     private int _triggerCase = NONE;
     private TriggerValue _triggerValue;
 
+    public GameObject blinksparent;
+    
     private void Start()
     {
+        // Insert all children blinks in the blinks list
+        foreach (Transform blink in blinksparent.transform)
+        {
+            if (blink.gameObject.name.Contains("BLINK"))
+            {
+                Debug.Log(blink.name);
+                blinks.Add(blink.gameObject);
+            }
+        }
+        
         // Activate the first blink and arm the trigger
         GameObject newBlink = blinks[_blinkCounter];
         newBlink.SetActive(true);
