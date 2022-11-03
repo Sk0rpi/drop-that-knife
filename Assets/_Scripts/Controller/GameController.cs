@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
     private const int NONE = 0;
     private const int TIME = 1;
     private const int OBJECT = 2;
+    private const int BUTTONPRESS = 3;
     
     private List<GameObject> blinks = new List<GameObject>();
     private int _blinkCounter = 0;
@@ -20,6 +21,7 @@ public class GameController : MonoBehaviour
     private Timer _timer;
     private int _triggerCase = NONE;
     private TriggerValue _triggerValue;
+    private TriggerConnector _triggerConnector;
 
     public GameObject blinksparent;
     
@@ -41,7 +43,7 @@ public class GameController : MonoBehaviour
         
         Set_Debug_Blink();
         
-        animator.SetTrigger("Fade_in");;
+        //animator.SetTrigger("Fade_in");
     }
 
     void Update()
@@ -60,22 +62,28 @@ public class GameController : MonoBehaviour
         if (newBlink.GetComponent(typeof(TriggerConnector)) != null)
         {
             // If so, extract the TriggerConnector of the blink into a variable for further checks 
-            TriggerConnector triggerConnector = newBlink.GetComponent(typeof(TriggerConnector)) as TriggerConnector;
+            _triggerConnector = newBlink.GetComponent(typeof(TriggerConnector)) as TriggerConnector;
 
             // Check if the trigger is timebased
-            if (triggerConnector.isTimeTrigger)
+            if (_triggerConnector.isTimeTrigger)
             {
                 // If so, set the TriggerCase to 1 (TIME) and set the Timer with the attached time in seconds
                 _triggerCase = TIME;
-                Set_Timer(triggerConnector.timeInSec);
+                Set_Timer(_triggerConnector.timeInSec);
             }
             
             // Check if the trigger is lifebased
-            else if (triggerConnector.isObjectTrigger)
+            else if (_triggerConnector.isObjectTrigger)
             {
                 // If so, set the TriggerCase to 2 (OBJECT) and set the intern trigger GameObject
                 _triggerCase = OBJECT;
-                Set_GameObject_Trigger(triggerConnector.toObserve);
+                Set_GameObject_Trigger(_triggerConnector.toObserve);
+            }
+            
+            else if (_triggerConnector.isButtonTrigger)
+            {
+                _triggerCase = BUTTONPRESS;
+                Set_GameObject_Trigger(_triggerConnector.toObserve);
             }
 
             // If none of the trigger cases are fulfilled
@@ -129,10 +137,11 @@ public class GameController : MonoBehaviour
             // If the timer is done
             else
             {
+                Debug.Log("Timer ran out");
                 // Set the triggerCase to NONE
                 _triggerCase = NONE;
                 // And call the blink change
-                Trigger_Blink_Change();
+                StartCoroutine("Trigger_Blink_Change");
             }
         }
         
@@ -145,7 +154,20 @@ public class GameController : MonoBehaviour
                 // If so, set the triggerCase to NONE
                 _triggerCase = NONE;
                 // And call the blink change
-                Trigger_Blink_Change();
+                StartCoroutine("Trigger_Blink_Change");
+            }
+        }
+
+        // Check if the triggerCase is the BUTTONPRESS trigger
+        else if (_triggerCase == BUTTONPRESS)
+        {
+            // If so, check if the gameObject is triggered
+            if (_triggerValue.triggered)
+            {
+                // If so, set the triggerCase to NONE
+                _triggerCase = NONE;
+                // And call the blink change
+                StartCoroutine("Trigger_Blink_Change");
             }
         }
     }
@@ -170,28 +192,38 @@ public class GameController : MonoBehaviour
     /// <summary>
     /// Trigger_Blink_Change deactivates the current blink, activates the next one and triggers a blink animation
     /// </summary>
-    public void Trigger_Blink_Change()
+    public IEnumerator Trigger_Blink_Change()
     {
+        Debug.Log("Changing Blink...");
+
+        // Wait for a delay we can set up in each triggerConnector
+        yield return new WaitForSecondsRealtime(_triggerConnector.blinkDelay);
+
         // Trigger Blink-Animation Fade_out
         animator.SetTrigger("Fade_out");
-        
+
+        // Wait for a delay so everything shows up properly
+        yield return new WaitForSecondsRealtime(1f);
+
+        Debug.Log("Blink changed!");
+
         // Get old blink object
         GameObject oldBlink = blinks[_blinkCounter];
         // Deactivate old blink object
         oldBlink.SetActive(false);
-        
-        _blinkCounter++;
-        
+
         // Get new blink object
-        GameObject newBlink = blinks[_blinkCounter];
+        _blinkCounter++;
+        GameObject newBlink = blinks[_blinkCounter]; 
+        // Trigger Blink-Animation Fade_in
+        animator.SetTrigger("Fade_in");
+
         // Activate new blink object
         newBlink.SetActive(true);
         // Call the trigger arming with the new blink object
         Arm_Trigger(newBlink);
-        
+
         Set_Debug_Blink();
-        
-        // Trigger Blink-Animation Fade_in
-        animator.SetTrigger("Fade_in");
     }
+
 }

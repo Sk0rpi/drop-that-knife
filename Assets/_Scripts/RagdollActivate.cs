@@ -14,7 +14,10 @@ public class RagdollActivate : MonoBehaviour
 
     [SerializeField] Volume stabVolume;
 
+    [SerializeField] TriggerValue triggerValueChanger;
+
     List<Collider> ragdollParts = new List<Collider>();
+
 
     private void Awake()
     {
@@ -83,7 +86,11 @@ public class RagdollActivate : MonoBehaviour
 
                 ActivateRagdoll();
 
-                stabVolume.weight = 1;
+                if(triggerValueChanger != null)
+                    triggerValueChanger.triggered = true;
+
+                if(stabVolume != null)
+                    stabVolume.weight = 1;
             }
         }
     }

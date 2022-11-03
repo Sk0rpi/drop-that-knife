@@ -19,8 +19,4 @@ public class TriggerCheckerMovement : MonoBehaviour
         _triggerValue.triggered = true;
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        _triggerValue.triggered = true;
-    }
 }
