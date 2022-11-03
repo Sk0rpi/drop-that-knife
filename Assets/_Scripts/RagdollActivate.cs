@@ -72,6 +72,12 @@ public class RagdollActivate : MonoBehaviour
                 bloodParticles.transform.forward = contact.normal;
                 bloodParticles.Play();
 
+                if (GetComponent(typeof(Trigger)) != null)
+                {
+                    Trigger trigger = GetComponent(typeof(Trigger)) as Trigger;
+                    trigger.triggered = true;
+                }
+
                 ActivateRagdoll();
 
                 SceneJump.instance.ChangeScene(1);
