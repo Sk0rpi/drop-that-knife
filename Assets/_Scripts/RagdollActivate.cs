@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class RagdollActivate : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class RagdollActivate : MonoBehaviour
     [SerializeField] Rigidbody rootRb;
 
     [SerializeField] ParticleSystem bloodParticles;
+
+    [SerializeField] Volume stabVolume;
 
     List<Collider> ragdollParts = new List<Collider>();
 
@@ -79,6 +82,8 @@ public class RagdollActivate : MonoBehaviour
                 }
 
                 ActivateRagdoll();
+
+                stabVolume.weight = 1;
             }
         }
     }
