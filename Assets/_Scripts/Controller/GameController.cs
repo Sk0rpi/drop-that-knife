@@ -30,7 +30,6 @@ public class GameController : MonoBehaviour
         {
             if (blink.gameObject.name.Contains("BLINK"))
             {
-                Debug.Log(blink.name);
                 blinks.Add(blink.gameObject);
             }
         }
