@@ -6,4 +6,9 @@ using UnityEngine;
 public class TriggerValue : MonoBehaviour
 {
     public bool triggered = false;
+
+    public void SetTriggered()
+    {
+        triggered = true;
+    }
 }

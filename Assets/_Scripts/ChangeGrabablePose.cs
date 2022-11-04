@@ -33,6 +33,8 @@ public class ChangeGrabablePose : XRGrabInteractable
 
         base.OnSelectEntered(args);
     }
+
+    // Called when the player activates the knife in hand, changing its pose
     public void ChangeAttachTransform()
     {
         attachTransformAux = grabInteractable.attachTransform;
@@ -49,6 +51,7 @@ public class ChangeGrabablePose : XRGrabInteractable
         grabInteractable.attachTransform = attachTransformAux;
     }
 
+    // Called when enters select, changes the hand attach transform
     public void ChangeHandAttachTransform()
     {
         attachTransformAux = grabInteractable.attachTransform;

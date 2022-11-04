@@ -11,6 +11,9 @@ public class TriggerConnector : MonoBehaviour
         "to observe should be the same object and this object should have " +
         "a TriggerCheckerInput component")]
     public GameObject toObserve;
+    [Tooltip("If the button is a button trigger, " +
+        "to observe should be the same object and this object should have " +
+        "a TriggerCheckerInput component")]
     public bool isButtonTrigger;
     public float blinkDelay = 0f;
 
