@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   postExposure:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: -0.34
   contrast:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 23
   colorFilter:
     m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -27,7 +27,7 @@ MonoBehaviour:
     m_Value: 0
   saturation:
     m_OverrideState: 1
-    m_Value: -70
+    m_Value: -79
 --- !u!114 &-4673220976647406090
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -68,7 +68,7 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.911
+    m_Value: 0.887
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,9 +83,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   components:
   - {fileID: -2118289664328690479}
-  - {fileID: 7753040080663423739}
   - {fileID: -4693993225196212647}
+  - {fileID: 7753040080663423739}
   - {fileID: -4673220976647406090}
+  - {fileID: 8157174097139815287}
 --- !u!114 &7753040080663423739
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -107,10 +108,51 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.414
+    m_Value: 0.341
   smoothness:
     m_OverrideState: 1
-    m_Value: 0.905
+    m_Value: 0.661
   rounded:
+    m_OverrideState: 0
+    m_Value: 0
+--- !u!114 &8157174097139815287
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2db86121404754db890f4c8dfe81b2, type: 3}
+  m_Name: Bloom
+  m_EditorClassIdentifier: 
+  active: 1
+  threshold:
+    m_OverrideState: 1
+    m_Value: 0.91
+  intensity:
+    m_OverrideState: 1
+    m_Value: 7.82
+  scatter:
+    m_OverrideState: 1
+    m_Value: 0.91
+  clamp:
+    m_OverrideState: 0
+    m_Value: 65472
+  tint:
+    m_OverrideState: 0
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+  highQualityFiltering:
+    m_OverrideState: 0
+    m_Value: 0
+  skipIterations:
+    m_OverrideState: 0
+    m_Value: 1
+  dirtTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+    dimension: 1
+  dirtIntensity:
     m_OverrideState: 0
     m_Value: 0
