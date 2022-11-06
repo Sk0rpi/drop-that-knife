@@ -16,7 +16,10 @@ public class TriggerCheckerMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        _triggerValue.triggered = true;
+        if (other.CompareTag("Player"))
+        {
+            _triggerValue.triggered = true;
+        }
     }
 
 }
