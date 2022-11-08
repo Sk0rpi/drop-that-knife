@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 404348849184884972}
   - component: {fileID: 404348849184884975}
   - component: {fileID: 404348849184884974}
-  - component: {fileID: 404348849184884977}
   - component: {fileID: 404348849184884976}
   - component: {fileID: 404348849184884973}
+  - component: {fileID: 8292382175756233984}
   m_Layer: 0
   m_Name: TriggerArea
   m_TagString: Untagged
@@ -86,20 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &404348849184884977
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 404348849184884979}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 5.000001
-  m_Direction: 1
-  m_Center: {x: 0.000000047683717, y: 0, z: -0.00000009536743}
 --- !u!114 &404348849184884976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,3 +111,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fd06a05f69e5e24090c54903d1493d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &8292382175756233984
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404348849184884979}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.15, y: 2, z: 1.0000002}
+  m_Center: {x: 0, y: 0, z: 0}
