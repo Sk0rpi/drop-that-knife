@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameController : MonoBehaviour
 {
@@ -29,9 +30,11 @@ public class GameController : MonoBehaviour
     private TriggerConnector _triggerConnector;
     private GameObject player;
     public GameObject blinksParent;
+    public UnityEvent onBlinkPerformed;
     
     private void Start()
     {
+        onBlinkPerformed = new UnityEvent();
         // Insert all children blinks in the blinks list
         foreach (Transform blink in blinksParent.transform)
         {
@@ -209,7 +212,7 @@ public class GameController : MonoBehaviour
         // Wait for a delay so everything shows up properly
         yield return new WaitForSecondsRealtime(1f);
 
-        Debug.Log("Blink changed!");
+        Debug.Log("Blink changed, current: " + (_blinkCounter + 1));
 
         // Update player position if needed
         if (_triggerConnector.movePlayer)
@@ -224,8 +227,12 @@ public class GameController : MonoBehaviour
 
         // Get new blink object
         _blinkCounter++;
-        GameObject newBlink = blinks[_blinkCounter]; 
-       
+        GameObject newBlink = blinks[_blinkCounter];
+
+        // Callbacks for blinks
+        onBlinkPerformed.Invoke();     // +1 to get the same number as in editor
+
+
         animator.SetTrigger("Fade_in");
 
         // Call the trigger arming with the new blink object
