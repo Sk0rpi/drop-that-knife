@@ -12,23 +12,28 @@ public class GameController : MonoBehaviour
     private const int TIME = 1;
     private const int OBJECT = 2;
     private const int BUTTONPRESS = 3;
-    
+
+    // Blink attributes
     private List<GameObject> blinks = new List<GameObject>();
     private int _blinkCounter = 0;
+
+    // Public references
     public Animator animator;
     public TMP_Text debug_Blink;
     public TMP_Text debug_Timer;
+
+    // Members
     private Timer _timer;
     private int _triggerCase = NONE;
     private TriggerValue _triggerValue;
     private TriggerConnector _triggerConnector;
-
-    public GameObject blinksparent;
+    private GameObject player;
+    public GameObject blinksParent;
     
     private void Start()
     {
         // Insert all children blinks in the blinks list
-        foreach (Transform blink in blinksparent.transform)
+        foreach (Transform blink in blinksParent.transform)
         {
             if (blink.gameObject.name.Contains("BLINK"))
             {
@@ -42,8 +47,8 @@ public class GameController : MonoBehaviour
         Arm_Trigger(newBlink);
         
         Set_Debug_Blink();
-        
-        //animator.SetTrigger("Fade_in");
+
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     void Update()
@@ -199,7 +204,6 @@ public class GameController : MonoBehaviour
         // Wait for a delay we can set up in each triggerConnector
         yield return new WaitForSecondsRealtime(_triggerConnector.blinkDelay);
 
-        // Trigger Blink-Animation Fade_out
         animator.SetTrigger("Fade_out");
 
         // Wait for a delay so everything shows up properly
@@ -207,21 +211,28 @@ public class GameController : MonoBehaviour
 
         Debug.Log("Blink changed!");
 
-        // Get old blink object
-        GameObject oldBlink = blinks[_blinkCounter];
+        // Update player position if needed
+        if (_triggerConnector.movePlayer)
+        {
+            player.transform.position = _triggerConnector.newPosition.position;
+            player.transform.rotation = _triggerConnector.newPosition.rotation;
+        }
+
         // Deactivate old blink object
+        GameObject oldBlink = blinks[_blinkCounter];
         oldBlink.SetActive(false);
 
         // Get new blink object
         _blinkCounter++;
         GameObject newBlink = blinks[_blinkCounter]; 
-        // Trigger Blink-Animation Fade_in
+       
         animator.SetTrigger("Fade_in");
 
-        // Activate new blink object
-        newBlink.SetActive(true);
         // Call the trigger arming with the new blink object
+        newBlink.SetActive(true);
         Arm_Trigger(newBlink);
+
+        
 
         Set_Debug_Blink();
     }

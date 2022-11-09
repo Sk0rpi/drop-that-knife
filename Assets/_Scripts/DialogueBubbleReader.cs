@@ -7,13 +7,11 @@ public class DialogueBubbleReader : MonoBehaviour
 {
     public DialogueBubbleScriptableObject bubbleText;
 
-    private TextMeshProUGUI text;
+    public TextMeshProUGUI text;
 
     // Start is called before the first frame update
     void Start()
     {
-        text = GetComponent<TextMeshProUGUI>();
-
         text.text = bubbleText.text;
     }
 }
