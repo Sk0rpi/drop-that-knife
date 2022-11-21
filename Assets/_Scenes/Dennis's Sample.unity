@@ -1384,6 +1384,8 @@ MonoBehaviour:
   isButtonTrigger: 1
   blinkDelay: 0
   nextBlink: {fileID: 0}
+  movePlayer: 0
+  newPosition: {fileID: 0}
 --- !u!1 &267821987
 GameObject:
   m_ObjectHideFlags: 0
@@ -2439,6 +2441,8 @@ MonoBehaviour:
   isButtonTrigger: 0
   blinkDelay: 0
   nextBlink: {fileID: 674313266}
+  movePlayer: 0
+  newPosition: {fileID: 0}
 --- !u!114 &521451337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3782,6 +3786,8 @@ MonoBehaviour:
   isButtonTrigger: 0
   blinkDelay: 0
   nextBlink: {fileID: 521451334}
+  movePlayer: 0
+  newPosition: {fileID: 0}
 --- !u!114 &674313270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3801,6 +3807,8 @@ MonoBehaviour:
   isButtonTrigger: 0
   blinkDelay: 0
   nextBlink: {fileID: 1828754440}
+  movePlayer: 0
+  newPosition: {fileID: 0}
 --- !u!1 &696879932
 GameObject:
   m_ObjectHideFlags: 0
@@ -4640,6 +4648,8 @@ MonoBehaviour:
   isButtonTrigger: 0
   blinkDelay: 0
   nextBlink: {fileID: 0}
+  movePlayer: 0
+  newPosition: {fileID: 0}
 --- !u!1 &846809713
 GameObject:
   m_ObjectHideFlags: 0
@@ -7038,6 +7048,9 @@ MonoBehaviour:
   debug_Blink: {fileID: 942945503}
   debug_Timer: {fileID: 954159110}
   activeBlink: {fileID: 521451334}
+  onBlinkPerformed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1567606696
 GameObject:
   m_ObjectHideFlags: 0
@@ -7716,6 +7729,8 @@ MonoBehaviour:
   isButtonTrigger: 1
   blinkDelay: 0
   nextBlink: {fileID: 0}
+  movePlayer: 0
+  newPosition: {fileID: 0}
 --- !u!1001 &1852744702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8323,6 +8338,8 @@ MonoBehaviour:
   isButtonTrigger: 1
   blinkDelay: 0
   nextBlink: {fileID: 0}
+  movePlayer: 0
+  newPosition: {fileID: 0}
 --- !u!1 &1882282058
 GameObject:
   m_ObjectHideFlags: 0
@@ -11222,6 +11239,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 521451335}
     m_Modifications:
+    - target: {fileID: 782150651070181924, guid: 7b51b53bf682ca44fa96b365373f181f,
+        type: 3}
+      propertyPath: bubbleText
+      value: 
+      objectReference: {fileID: 11400000, guid: c11147b447f254e4085ebec2caa62b39,
+        type: 2}
     - target: {fileID: 5936827911100658951, guid: 7b51b53bf682ca44fa96b365373f181f,
         type: 3}
       propertyPath: m_Pivot.x
