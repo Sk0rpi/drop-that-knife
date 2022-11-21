@@ -80,7 +80,6 @@ public class Trigger : MonoBehaviour
     
     public void Arm_Trigger()
     {
-        this.debug_Timer = debug_Timer;
         blinkDelay = triggerConnector.blinkDelay;
 
         bool triggerActive = false;
