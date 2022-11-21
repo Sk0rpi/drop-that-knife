@@ -23,6 +23,8 @@ public class TriggerConnector : MonoBehaviour
     [Header("Blink Delay (real time)")]
     public float blinkDelay = 0f;
 
+    public GameObject nextBlink;
+
     [Space]
     [Header("Change the position of player?")]
     public bool movePlayer = false;
