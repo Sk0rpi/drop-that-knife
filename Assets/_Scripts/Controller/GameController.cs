@@ -19,9 +19,9 @@ public class GameController : MonoBehaviour
     public TMP_Text debug_Blink;
     public TMP_Text debug_Timer;
     private Timer _timer;
-    private int _triggerCase = NONE;
-    private TriggerValue _triggerValue;
-    private TriggerConnector _triggerConnector;
+    private List<int> _triggerCases = new List<int>();
+    private List<TriggerValue> _triggerValues = new List<TriggerValue>();
+    private float _blinkDelay;
 
     public GameObject blinksparent;
     
@@ -62,36 +62,43 @@ public class GameController : MonoBehaviour
         if (newBlink.GetComponent(typeof(TriggerConnector)) != null)
         {
             // If so, extract the TriggerConnector of the blink into a variable for further checks 
-            _triggerConnector = newBlink.GetComponent(typeof(TriggerConnector)) as TriggerConnector;
+            TriggerConnector triggerConnector = newBlink.GetComponent(typeof(TriggerConnector)) as TriggerConnector;
+            _blinkDelay = triggerConnector.blinkDelay;
+
+            bool triggerActive = false;
 
             // Check if the trigger is timebased
-            if (_triggerConnector.isTimeTrigger)
+            if (triggerConnector.isTimeTrigger)
             {
                 // If so, set the TriggerCase to 1 (TIME) and set the Timer with the attached time in seconds
-                _triggerCase = TIME;
-                Set_Timer(_triggerConnector.timeInSec);
+                _triggerCases.Add(TIME);
+                Set_Timer(triggerConnector.timeInSec);
+                _triggerValues.Add(null);
+                triggerActive = true;
             }
             
             // Check if the trigger is lifebased
-            else if (_triggerConnector.isObjectTrigger)
+            if (triggerConnector.isObjectTrigger)
             {
                 // If so, set the TriggerCase to 2 (OBJECT) and set the intern trigger GameObject
-                _triggerCase = OBJECT;
-                Set_GameObject_Trigger(_triggerConnector.toObserve);
+                _triggerCases.Add(OBJECT);
+                Set_GameObject_Trigger(triggerConnector.toObserve);
+                triggerActive = true;
             }
             
-            else if (_triggerConnector.isButtonTrigger)
+            if (triggerConnector.isButtonTrigger)
             {
-                _triggerCase = BUTTONPRESS;
-                Set_GameObject_Trigger(_triggerConnector.toObserve);
+                _triggerCases.Add(BUTTONPRESS);
+                Set_GameObject_Trigger(triggerConnector.toObserve);
+                triggerActive = true;
             }
 
-            // If none of the trigger cases are fulfilled
-            else
+            if (!triggerActive)
             {
+                // If none of the trigger cases are fulfilled
                 // Inform the developer that none trigger has been found
-                _triggerCase = NONE;
-                Debug.LogError("NO BLINK-TRIGGER FOUND!");
+                _triggerCases.Add(NONE);
+                Debug.LogError("NO BLINK-TRIGGER FOUND!");   
             }
         }
 
@@ -108,7 +115,7 @@ public class GameController : MonoBehaviour
     {
         if (gameObject.GetComponent(typeof(TriggerValue)) != null)
         {
-            _triggerValue = gameObject.GetComponent(typeof(TriggerValue)) as TriggerValue;
+            _triggerValues.Add(gameObject.GetComponent(typeof(TriggerValue)) as TriggerValue);
         }
 
         else
@@ -123,51 +130,61 @@ public class GameController : MonoBehaviour
     /// </summary>
     private void Check_Trigger()
     {
-        // Check if the triggerCase is the TIME trigger
-        if (_triggerCase == TIME)
+        for (int i = 0; i < _triggerCases.Count; i++)
         {
-            // If so, check if the timer is still running
-            if (_timer.Is_Running())
+            int triggerCase = _triggerCases[i];
+            Debug.Log("Checking case: " + triggerCase);
+            TriggerValue triggerValue = _triggerValues[i];
+            
+            // Check if the triggerCase is the TIME trigger
+            if (triggerCase == TIME)
             {
-                // If so, update the timer
-                _timer.Update_Timer();
-                Set_Debug_Timer();
+                Debug.Log("Confirm TIME");
+                // If so, check if the timer is still running
+                if (_timer.Is_Running())
+                {
+                    // If so, update the timer
+                    _timer.Update_Timer();
+                    Set_Debug_Timer();
+                }
+
+                // If the timer is done
+                else
+                {
+                    Debug.Log("Timer ran out");
+                    // Set the triggerCase to NONE
+                    _triggerCases[i] = NONE;
+                    // And call the blink change
+                    StartCoroutine("Trigger_Blink_Change");
+                }
+            }
+            
+            // Check if the triggerCase is the OBJECT trigger
+            else if (triggerCase == OBJECT)
+            {
+                Debug.Log("Confirm OBJECT");
+                // If so, check if the gameObject is triggered
+                if (triggerValue.triggered)
+                {
+                    // If so, set the triggerCase to NONE
+                    _triggerCases[i] = NONE;
+                    // And call the blink change
+                    StartCoroutine("Trigger_Blink_Change");
+                }
             }
 
-            // If the timer is done
-            else
+            // Check if the triggerCase is the BUTTONPRESS trigger
+            else if (triggerCase == BUTTONPRESS)
             {
-                Debug.Log("Timer ran out");
-                // Set the triggerCase to NONE
-                _triggerCase = NONE;
-                // And call the blink change
-                StartCoroutine("Trigger_Blink_Change");
-            }
-        }
-        
-        // Check if the triggerCase is the OBJECT trigger
-        else if (_triggerCase == OBJECT)
-        {
-            // If so, check if the gameObject is triggered
-            if (_triggerValue.triggered)
-            {
-                // If so, set the triggerCase to NONE
-                _triggerCase = NONE;
-                // And call the blink change
-                StartCoroutine("Trigger_Blink_Change");
-            }
-        }
-
-        // Check if the triggerCase is the BUTTONPRESS trigger
-        else if (_triggerCase == BUTTONPRESS)
-        {
-            // If so, check if the gameObject is triggered
-            if (_triggerValue.triggered)
-            {
-                // If so, set the triggerCase to NONE
-                _triggerCase = NONE;
-                // And call the blink change
-                StartCoroutine("Trigger_Blink_Change");
+                Debug.Log("Confirm BUTTONPRESS");
+                // If so, check if the gameObject is triggered
+                if (triggerValue.triggered)
+                {
+                    // If so, set the triggerCase to NONE
+                    _triggerCases[i] = NONE;
+                    // And call the blink change
+                    StartCoroutine("Trigger_Blink_Change");
+                }
             }
         }
     }
@@ -194,10 +211,12 @@ public class GameController : MonoBehaviour
     /// </summary>
     public IEnumerator Trigger_Blink_Change()
     {
+        _triggerCases.Clear();
+        _triggerValues.Clear();
         Debug.Log("Changing Blink...");
 
         // Wait for a delay we can set up in each triggerConnector
-        yield return new WaitForSecondsRealtime(_triggerConnector.blinkDelay);
+        yield return new WaitForSecondsRealtime(_blinkDelay);
 
         // Trigger Blink-Animation Fade_out
         animator.SetTrigger("Fade_out");

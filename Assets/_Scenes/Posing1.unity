@@ -2431,7 +2431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e127270b4646d468cacbc805d50841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTimeTrigger: 0
+  isTimeTrigger: 1
   timeInSec: 5
   isObjectTrigger: 0
   toObserve: {fileID: 521451334}
