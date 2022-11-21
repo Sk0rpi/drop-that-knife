@@ -16,10 +16,15 @@ public class GameController : MonoBehaviour
 
     private Trigger _activeTrigger;
 
+    private GameObject player;
+    public UnityEvent onBlinkPerformed;
+
     private Dictionary<Trigger, GameObject> _triggerBlinkRelation = new Dictionary<Trigger, GameObject>();
 
     private void Start()
     {
+        onBlinkPerformed = new UnityEvent();
+        
         // Activate the first blink and arm the trigger
         activeBlink.SetActive(true);
         Arm_Triggers(activeBlink);
@@ -122,8 +127,8 @@ public class GameController : MonoBehaviour
         
         if (trigger.triggerConnector.movePlayer)
         {
-            player.transform.position = _triggerConnector.newPosition.position;
-            player.transform.rotation = _triggerConnector.newPosition.rotation;
+            player.transform.position = trigger.triggerConnector.newPosition.position;
+            player.transform.rotation = trigger.triggerConnector.newPosition.rotation;
         }
 
         activeBlink = nextBlink;
