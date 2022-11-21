@@ -1383,6 +1383,7 @@ MonoBehaviour:
   toObserve: {fileID: 197577912}
   isButtonTrigger: 1
   blinkDelay: 0
+  nextBlink: {fileID: 0}
 --- !u!1 &267821987
 GameObject:
   m_ObjectHideFlags: 0
@@ -2395,7 +2396,6 @@ GameObject:
   - component: {fileID: 521451335}
   - component: {fileID: 521451336}
   - component: {fileID: 521451337}
-  - component: {fileID: 521451338}
   m_Layer: 0
   m_Name: BLINK 1
   m_TagString: Untagged
@@ -2432,12 +2432,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e127270b4646d468cacbc805d50841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTimeTrigger: 0
-  timeInSec: 0
-  isObjectTrigger: 1
+  isTimeTrigger: 1
+  timeInSec: 5
+  isObjectTrigger: 0
   toObserve: {fileID: 521451334}
   isButtonTrigger: 0
   blinkDelay: 0
+  nextBlink: {fileID: 674313266}
 --- !u!114 &521451337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2464,24 +2465,6 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -8985199710864664118, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
---- !u!114 &521451338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 521451334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2e127270b4646d468cacbc805d50841, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isTimeTrigger: 1
-  timeInSec: 150
-  isObjectTrigger: 0
-  toObserve: {fileID: 0}
-  isButtonTrigger: 0
-  blinkDelay: 0
 --- !u!1 &533783667
 GameObject:
   m_ObjectHideFlags: 0
@@ -3755,6 +3738,7 @@ GameObject:
   m_Component:
   - component: {fileID: 674313267}
   - component: {fileID: 674313269}
+  - component: {fileID: 674313270}
   m_Layer: 0
   m_Name: BLINK 3
   m_TagString: Untagged
@@ -3793,10 +3777,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isTimeTrigger: 1
   timeInSec: 150
+  isObjectTrigger: 0
+  toObserve: {fileID: 0}
+  isButtonTrigger: 0
+  blinkDelay: 0
+  nextBlink: {fileID: 521451334}
+--- !u!114 &674313270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674313266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2e127270b4646d468cacbc805d50841, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTimeTrigger: 0
+  timeInSec: 0
   isObjectTrigger: 1
   toObserve: {fileID: 879939187}
   isButtonTrigger: 0
   blinkDelay: 0
+  nextBlink: {fileID: 1828754440}
 --- !u!1 &696879932
 GameObject:
   m_ObjectHideFlags: 0
@@ -4607,7 +4611,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823505598}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4635,6 +4639,7 @@ MonoBehaviour:
   toObserve: {fileID: 1620883880}
   isButtonTrigger: 0
   blinkDelay: 0
+  nextBlink: {fileID: 0}
 --- !u!1 &846809713
 GameObject:
   m_ObjectHideFlags: 0
@@ -7032,7 +7037,7 @@ MonoBehaviour:
   animator: {fileID: 1469999674}
   debug_Blink: {fileID: 942945503}
   debug_Timer: {fileID: 954159110}
-  blinksparent: {fileID: 1565040308}
+  activeBlink: {fileID: 521451334}
 --- !u!1 &1567606696
 GameObject:
   m_ObjectHideFlags: 0
@@ -7710,6 +7715,7 @@ MonoBehaviour:
   toObserve: {fileID: 1828754440}
   isButtonTrigger: 1
   blinkDelay: 0
+  nextBlink: {fileID: 0}
 --- !u!1001 &1852744702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8316,6 +8322,7 @@ MonoBehaviour:
   toObserve: {fileID: 1866933140}
   isButtonTrigger: 1
   blinkDelay: 0
+  nextBlink: {fileID: 0}
 --- !u!1 &1882282058
 GameObject:
   m_ObjectHideFlags: 0

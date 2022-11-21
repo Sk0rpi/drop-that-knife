@@ -17,6 +17,8 @@ public class TriggerConnector : MonoBehaviour
     public bool isButtonTrigger;
     public float blinkDelay = 0f;
 
+    public GameObject nextBlink;
+
     private void Start()
     {
         if(isButtonTrigger)
