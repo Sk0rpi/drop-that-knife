@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameController : MonoBehaviour
 {
@@ -24,7 +25,9 @@ public class GameController : MonoBehaviour
         Arm_Triggers(activeBlink);
         
         Set_Debug_Blink();
-        //animator.SetTrigger("Fade_in");
+        animator.SetTrigger("Fade_in");
+
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     void Update()
@@ -107,7 +110,6 @@ public class GameController : MonoBehaviour
         // Wait for a delay we can set up in each triggerConnector
         yield return new WaitForSecondsRealtime(trigger.blinkDelay);
 
-        // Trigger Blink-Animation Fade_out
         animator.SetTrigger("Fade_out");
 
         // Wait for a delay so everything shows up properly
@@ -117,6 +119,12 @@ public class GameController : MonoBehaviour
         
         // Deactivate old blink object
         activeBlink.SetActive(false);
+        
+        if (trigger.triggerConnector.movePlayer)
+        {
+            player.transform.position = _triggerConnector.newPosition.position;
+            player.transform.rotation = _triggerConnector.newPosition.rotation;
+        }
 
         activeBlink = nextBlink;
         // Trigger Blink-Animation Fade_in
@@ -124,8 +132,12 @@ public class GameController : MonoBehaviour
 
         // Activate new blink object
         activeBlink.SetActive(true);
+        
+        // Callbacks for blinks
+        onBlinkPerformed.Invoke();     // +1 to get the same number as in editor
+        
         // Call the trigger arming with the new blink object
-        Arm_Triggers(activeBlink);
+        Arm_Triggers(activeBlink);        
 
         Set_Debug_Blink();
     }

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class DialogController : MonoBehaviour
 {
-    public GameObject target;
+    private GameObject target;
     // Start is called before the first frame update
     void Start()
     {
-        
+        target = Camera.main.gameObject;
     }
 
     // Update is called once per frame
@@ -16,7 +16,7 @@ public class DialogController : MonoBehaviour
     {
         if (target != null)
         {
-            transform.LookAt(target.transform);
+            transform.LookAt(2 * transform.position - target.transform.position);
         }
     }
 }
