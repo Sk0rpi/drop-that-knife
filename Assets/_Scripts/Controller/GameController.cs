@@ -21,6 +21,20 @@ public class GameController : MonoBehaviour
 
     private Dictionary<Trigger, GameObject> _triggerBlinkRelation = new Dictionary<Trigger, GameObject>();
 
+    public static GameController instance;
+
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);    // Destroy the gameObject if there is already a GameController
+        }
+    }
+
     private void Start()
     {
         onBlinkPerformed = new UnityEvent();
@@ -30,7 +44,6 @@ public class GameController : MonoBehaviour
         Arm_Triggers(activeBlink);
         
         Set_Debug_Blink();
-        animator.SetTrigger("Fade_in");
 
         player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -124,6 +137,8 @@ public class GameController : MonoBehaviour
         
         // Deactivate old blink object
         activeBlink.SetActive(false);
+
+        _triggerBlinkRelation.Clear();
         
         if (trigger.triggerConnector.movePlayer)
         {

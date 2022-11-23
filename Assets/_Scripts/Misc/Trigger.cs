@@ -24,13 +24,11 @@ public class Trigger : MonoBehaviour
         for (int i = 0; i < _triggerCases.Count; i++)
         {
             int triggerCase = _triggerCases[i];
-            Debug.Log("Checking case: " + triggerCase);
             TriggerValue triggerValue = _triggerValues[i];
             
             // Check if the triggerCase is the TIME trigger
             if (triggerCase == TIME)
             {
-                Debug.Log("Confirm TIME");
                 // If so, check if the timer is still running
                 if (_timer.Is_Running())
                 {
@@ -42,7 +40,6 @@ public class Trigger : MonoBehaviour
                 // If the timer is done
                 else
                 {
-                    Debug.Log("Timer ran out");
                     // Set the triggerCase to NONE
                     _triggerCases[i] = NONE;
                     return true;
@@ -52,7 +49,6 @@ public class Trigger : MonoBehaviour
             // Check if the triggerCase is the OBJECT trigger
             else if (triggerCase == OBJECT)
             {
-                Debug.Log("Confirm OBJECT");
                 // If so, check if the gameObject is triggered
                 if (triggerValue.triggered)
                 {
@@ -65,7 +61,6 @@ public class Trigger : MonoBehaviour
             // Check if the triggerCase is the BUTTONPRESS trigger
             else if (triggerCase == BUTTONPRESS)
             {
-                Debug.Log("Confirm BUTTONPRESS");
                 // If so, check if the gameObject is triggered
                 if (triggerValue.triggered)
                 {

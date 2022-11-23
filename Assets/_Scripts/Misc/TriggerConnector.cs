@@ -30,7 +30,7 @@ public class TriggerConnector : MonoBehaviour
     public bool movePlayer = false;
     public Transform newPosition;
 
-    private void Start()
+    private void Start()    // !! DANGEROUS !! Button trigger and object trigger are not compatible
     {
         if(isButtonTrigger)
         {
