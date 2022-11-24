@@ -12,6 +12,8 @@ public class GameController : MonoBehaviour
     public TMP_Text debug_Blink;
     public TMP_Text debug_Timer;
 
+    [Space]
+    [Header("Starting Blink / Active Blink")]
     public GameObject activeBlink;
 
     private Trigger _activeTrigger;
