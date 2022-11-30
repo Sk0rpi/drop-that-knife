@@ -9,7 +9,9 @@ public class BeltInventoryFollowHead : MonoBehaviour
     [SerializeField]
     float yPosition = 0.8799999f;
     [SerializeField]
-    float damping = 2f;
+    float speed = 2f;
+    [SerializeField]
+    float maxDistanceAngle = 20f;
 
 
     // Update is called once per frame
@@ -27,18 +29,39 @@ public class BeltInventoryFollowHead : MonoBehaviour
         inventoryVector.y = 0;
 
         float angle = Vector3.Angle(headVector, inventoryVector);
-        if(Vector3.Cross(headVector, inventoryVector).y > 0)    // Get the negative value of the angle
-            angle = -angle;
 
-
-        Debug.Log(angle);
-        if (angle > 20 || angle < -20)
+        if (angle > maxDistanceAngle)  // If the angle surpasses the maxDistance, rotate towards it
         {
-            Quaternion rotation = Quaternion.Euler(0, angle, 0);
+            if (Vector3.Cross(headVector, inventoryVector).y > 0)    // In case of a negative value of the angle
+                angle = -angle;
 
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, Time.deltaTime * damping);
+            Quaternion rotation = Quaternion.Euler(0, transform.localRotation.eulerAngles.y + angle, 0);
+
+            transform.localRotation = Quaternion.RotateTowards(transform.localRotation, rotation, Time.deltaTime * speed);
+        }
+    }
+
+    public static Quaternion ShortestRotation(Quaternion a, Quaternion b)
+
+    {
+
+        if (Quaternion.Dot(a, b) < 0)
+
+        {
+
+            return a * Quaternion.Inverse(Multiply(b, -1));
 
         }
-       
+
+        else return a * Quaternion.Inverse(b);
+
+    }
+
+
+
+    public static Quaternion Multiply(Quaternion input, float scalar)
+
+    {
+        return new Quaternion(input.x * scalar, input.y * scalar, input.z * scalar, input.w * scalar);
     }
 }

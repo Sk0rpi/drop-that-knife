@@ -4154,7 +4154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   headTransform: {fileID: 365008792}
   yPosition: 0.8799999
-  damping: 80
+  speed: 80
+  maxDistanceAngle: 20
 --- !u!1 &625805807
 GameObject:
   m_ObjectHideFlags: 0
