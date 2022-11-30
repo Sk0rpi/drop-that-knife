@@ -73,4 +73,10 @@ public class ChangeGrabablePose : XRGrabInteractable
 
         grabInteractable.attachTransform = attachTransformAux;
     }
+
+    public void ResetTransform()
+    {
+        transform.localPosition = Vector3.zero;
+
+    }
 }

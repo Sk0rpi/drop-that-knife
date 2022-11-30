@@ -9,6 +9,8 @@ public class KillingBully : MonoBehaviour
     GameController gameController;
     [SerializeField]
     Volume deathVolume;
+    [SerializeField]
+    ParticleSystem bloodParticles;
 
     bool dead;
 
@@ -28,16 +30,20 @@ public class KillingBully : MonoBehaviour
         deathVolume.weight = x;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("Killer") && !dead)
+        if (collision.collider.CompareTag("Killer") && !dead)
         {
-            Debug.Log("Dead");
             dead = true;
             animator.SetTrigger("Death");
             DOVirtual.Float(1, 0.5f, 2f, ChangeTimeScale);
+
+            // Particles
+            ContactPoint contact = collision.contacts[0];
+            bloodParticles.transform.position = contact.point;
+            bloodParticles.transform.forward = contact.normal;
+            bloodParticles.Play();
         }
-        
     }
 
     private void ChangeTimeScale(float x)
