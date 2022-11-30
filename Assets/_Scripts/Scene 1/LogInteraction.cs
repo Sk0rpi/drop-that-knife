@@ -21,7 +21,7 @@ public class LogInteraction : MonoBehaviour
 
             triggerValue.SetTriggered();
 
-            Invoke("DestroyLog", 4f);
+            Invoke("DestroyLog", 3f);
         }
     }
 

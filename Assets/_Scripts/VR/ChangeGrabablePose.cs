@@ -79,7 +79,7 @@ public class ChangeGrabablePose : XRGrabInteractable
         transform.localPosition = Vector3.zero;
 
         transform.forward = transform.parent.forward;
-        transform.Rotate(new Vector3(90, 0, 0));
+        transform.Rotate(new Vector3(-90, 0, 0));
 
     }
 }
