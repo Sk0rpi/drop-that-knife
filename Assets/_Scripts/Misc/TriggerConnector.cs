@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class TriggerConnector : MonoBehaviour
 {
+    [Header("What is this trigger for? (only dev info)")]
+    public string triggerUsage;
+    [Space]
     [Header("Time Trigger")]
     public bool isTimeTrigger;
     public int timeInSec;
@@ -23,6 +26,8 @@ public class TriggerConnector : MonoBehaviour
     [Header("Blink Delay (real time)")]
     public float blinkDelay = 0f;
 
+    [Space]
+    [Header("Where does this trigger leads?")]
     public GameObject nextBlink;
 
     [Space]
