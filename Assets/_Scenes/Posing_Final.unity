@@ -2276,6 +2276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e127270b4646d468cacbc805d50841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerUsage: 
   isTimeTrigger: 0
   timeInSec: 0
   isObjectTrigger: 0
@@ -4329,6 +4330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e127270b4646d468cacbc805d50841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerUsage: 
   isTimeTrigger: 0
   timeInSec: 0
   isObjectTrigger: 0
@@ -4532,6 +4534,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Industrial BuildingV2
       objectReference: {fileID: 0}
+    - target: {fileID: 6039511224779179826, guid: 33a9238f62df093498c3d89b98027074,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 58c3038b443856743a6eaed683b69634, type: 2}
     - target: {fileID: 7729191775836630645, guid: 33a9238f62df093498c3d89b98027074,
         type: 3}
       propertyPath: m_IsActive
@@ -6308,6 +6315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e127270b4646d468cacbc805d50841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerUsage: 
   isTimeTrigger: 0
   timeInSec: 0
   isObjectTrigger: 0
@@ -8435,6 +8443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e127270b4646d468cacbc805d50841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerUsage: 
   isTimeTrigger: 1
   timeInSec: 6
   isObjectTrigger: 0
@@ -12559,6 +12568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e127270b4646d468cacbc805d50841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerUsage: 
   isTimeTrigger: 0
   timeInSec: 0
   isObjectTrigger: 1
@@ -17958,6 +17968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e127270b4646d468cacbc805d50841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerUsage: 
   isTimeTrigger: 0
   timeInSec: 0
   isObjectTrigger: 1
@@ -17979,6 +17990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e127270b4646d468cacbc805d50841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerUsage: 
   isTimeTrigger: 0
   timeInSec: 5
   isObjectTrigger: 1
@@ -23138,6 +23150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e127270b4646d468cacbc805d50841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerUsage: 
   isTimeTrigger: 0
   timeInSec: 0
   isObjectTrigger: 0
@@ -23220,6 +23233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e127270b4646d468cacbc805d50841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerUsage: 
   isTimeTrigger: 0
   timeInSec: 0
   isObjectTrigger: 0
@@ -23652,6 +23666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e127270b4646d468cacbc805d50841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerUsage: 
   isTimeTrigger: 0
   timeInSec: 0
   isObjectTrigger: 1
@@ -29713,6 +29728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e127270b4646d468cacbc805d50841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerUsage: 
   isTimeTrigger: 0
   timeInSec: 0
   isObjectTrigger: 0
@@ -31095,6 +31111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e127270b4646d468cacbc805d50841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerUsage: 
   isTimeTrigger: 0
   timeInSec: 0
   isObjectTrigger: 0
@@ -31788,6 +31805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e127270b4646d468cacbc805d50841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerUsage: 
   isTimeTrigger: 0
   timeInSec: 0
   isObjectTrigger: 1
