@@ -35,6 +35,11 @@ public class TriggerConnector : MonoBehaviour
     public bool movePlayer = false;
     public Transform newPosition;
 
+    [Space]
+    [Header("Trail")]
+    public bool haveTrail = false;
+    public Transform trailTarget;
+
     private void Start()    // !! DANGEROUS !! Button trigger and object trigger are not compatible
     {
         if(isButtonTrigger)

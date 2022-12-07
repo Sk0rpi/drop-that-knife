@@ -2286,6 +2286,8 @@ MonoBehaviour:
   nextBlink: {fileID: 348135548}
   movePlayer: 0
   newPosition: {fileID: 0}
+  haveTrail: 0
+  trailTarget: {fileID: 0}
 --- !u!4 &118422458
 Transform:
   m_ObjectHideFlags: 0
@@ -4340,6 +4342,8 @@ MonoBehaviour:
   nextBlink: {fileID: 1866933140}
   movePlayer: 0
   newPosition: {fileID: 0}
+  haveTrail: 1
+  trailTarget: {fileID: 25213368}
 --- !u!1001 &258983075
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6120,6 +6124,8 @@ MonoBehaviour:
   nextBlink: {fileID: 1828754440}
   movePlayer: 1
   newPosition: {fileID: 812309967}
+  haveTrail: 0
+  trailTarget: {fileID: 0}
 --- !u!4 &348135551
 Transform:
   m_ObjectHideFlags: 0
@@ -8247,6 +8253,8 @@ MonoBehaviour:
   nextBlink: {fileID: 823505598}
   movePlayer: 0
   newPosition: {fileID: 0}
+  haveTrail: 0
+  trailTarget: {fileID: 0}
 --- !u!114 &521451337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8520,7 +8528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4988496768901222, guid: 640e2e58c89e3714881006bd0c5eeabf, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4988496768901222, guid: 640e2e58c89e3714881006bd0c5eeabf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12401,6 +12409,8 @@ MonoBehaviour:
   nextBlink: {fileID: 197577912}
   movePlayer: 0
   newPosition: {fileID: 0}
+  haveTrail: 1
+  trailTarget: {fileID: 1852744703}
 --- !u!1 &696879932
 GameObject:
   m_ObjectHideFlags: 0
@@ -17613,9 +17623,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 625805819}
   trail: {fileID: 791376854}
-  speed: 10
-  trailFrequency: 2
-  target: {fileID: 539635347}
+  speed: 6
+  trailPeriod: 2
+  target: {fileID: 0}
 --- !u!199 &791376853
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -17637,7 +17647,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17658,7 +17668,7 @@ ParticleSystemRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_RenderMode: 2
+  m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -17771,7 +17781,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.2
+      scalar: 0.5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -17940,7 +17950,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 0.2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -18316,7 +18326,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 10
+    type: 0
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
@@ -18403,7 +18413,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.01
+      value: 0.1
       mode: 0
       spread: 0
       speed:
@@ -18575,7 +18585,7 @@ ParticleSystem:
     rateOverDistance:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 50
+      scalar: 20
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -18979,7 +18989,7 @@ ParticleSystem:
         atime0: 0
         atime1: 5975
         atime2: 22745
-        atime3: 49344
+        atime3: 65535
         atime4: 0
         atime5: 0
         atime6: 0
@@ -22403,7 +22413,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 791376851}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.351, y: 0, z: 33.084}
+  m_LocalPosition: {x: 6.99, y: 0, z: 24.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22631,6 +22641,8 @@ MonoBehaviour:
   nextBlink: {fileID: 674313266}
   movePlayer: 0
   newPosition: {fileID: 0}
+  haveTrail: 0
+  trailTarget: {fileID: 0}
 --- !u!114 &823505601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22653,6 +22665,8 @@ MonoBehaviour:
   nextBlink: {fileID: 521451334}
   movePlayer: 0
   newPosition: {fileID: 0}
+  haveTrail: 0
+  trailTarget: {fileID: 0}
 --- !u!1001 &852356404
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27787,6 +27801,8 @@ MonoBehaviour:
   nextBlink: {fileID: 975182325}
   movePlayer: 0
   newPosition: {fileID: 0}
+  haveTrail: 0
+  trailTarget: {fileID: 0}
 --- !u!4 &967187206
 Transform:
   m_ObjectHideFlags: 0
@@ -27870,6 +27886,8 @@ MonoBehaviour:
   nextBlink: {fileID: 1572423811}
   movePlayer: 0
   newPosition: {fileID: 0}
+  haveTrail: 0
+  trailTarget: {fileID: 0}
 --- !u!4 &975182328
 Transform:
   m_ObjectHideFlags: 0
@@ -28032,37 +28050,6 @@ ParticleSystem:
     type: 3}
   m_PrefabInstance: {fileID: 4323588518460166454}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1096090870
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1096090871}
-  m_Layer: 0
-  m_Name: New Player Position
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1096090871
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1096090870}
-  m_LocalRotation: {x: -0, y: 0.7223971, z: -0, w: 0.6914785}
-  m_LocalPosition: {x: -2.35, y: -0.8, z: -0.34}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1866933141}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 92.505, z: 0}
 --- !u!1 &1107329605 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4511655667520406305, guid: 087e2a9d318d8b842b11b221d1f79534,
@@ -28303,6 +28290,8 @@ MonoBehaviour:
   nextBlink: {fileID: 967187203}
   movePlayer: 0
   newPosition: {fileID: 0}
+  haveTrail: 1
+  trailTarget: {fileID: 1031841821}
 --- !u!1 &1137831545
 GameObject:
   m_ObjectHideFlags: 0
@@ -34193,19 +34182,8 @@ MonoBehaviour:
   activeBlink: {fileID: 521451334}
   onBlinkPerformed:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1632977777}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  trailTarget: {fileID: 0}
 --- !u!1 &1567606696
 GameObject:
   m_ObjectHideFlags: 0
@@ -34365,6 +34343,8 @@ MonoBehaviour:
   nextBlink: {fileID: 118422455}
   movePlayer: 0
   newPosition: {fileID: 0}
+  haveTrail: 0
+  trailTarget: {fileID: 0}
 --- !u!1 &1588957089 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 404348849184884979, guid: 812b5f43dbba08e4ab592db3a2d9f68a,
@@ -35748,6 +35728,8 @@ MonoBehaviour:
   nextBlink: {fileID: 0}
   movePlayer: 0
   newPosition: {fileID: 0}
+  haveTrail: 0
+  trailTarget: {fileID: 0}
 --- !u!1001 &1852744702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36389,7 +36371,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 938002529}
-  - {fileID: 1096090871}
   - {fileID: 1789020302}
   m_Father: {fileID: 1565040310}
   m_RootOrder: 4
@@ -36442,6 +36423,8 @@ MonoBehaviour:
   nextBlink: {fileID: 1111953622}
   movePlayer: 0
   newPosition: {fileID: 0}
+  haveTrail: 1
+  trailTarget: {fileID: 539635347}
 --- !u!1 &1882282058
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ public class ObjectiveTrail : MonoBehaviour
 
     [SerializeField] float speed;
 
-    [SerializeField] float trailFrequency;
+    [SerializeField] float trailPeriod;
 
     public Transform target;
 
@@ -32,21 +32,37 @@ public class ObjectiveTrail : MonoBehaviour
 
     void CalculatePath()
     {
-        Debug.Log(NavMesh.CalculatePath(player.transform.position, target.position, NavMesh.AllAreas, path));
+        if (target != null)
+        {
+            NavMesh.CalculatePath(player.transform.position, target.position, NavMesh.AllAreas, path);
+        }
     }
 
     private void Update()
     {
-       
-        MoveTrail();
+        timer += Time.deltaTime;
 
+        target = GameController.instance.trailTarget;
+        if (timer > trailPeriod && target != null)
+        {
+            MoveTrail();
+        }
+        else if (target == null)
+        {
+            trail.Stop();
+            trail.transform.position = player.transform.position;
+        }
+        
     }
 
+    /// <summary>
+    /// Move the trail when there is a path avaliable. 
+    /// </summary>
     void MoveTrail()
     {
         if (path.corners.Length > 0)    // If there is a path
         {
-
+            // The position of the next corner is not reached
             if (currentCorner + 1 <= path.corners.Length - 1 && trail.transform.position != path.corners[currentCorner + 1])
             {
                 Vector3 currentPosition = trail.transform.position;
@@ -55,7 +71,7 @@ public class ObjectiveTrail : MonoBehaviour
 
                 trail.transform.position = currentPosition;
             }
-            else
+            else // Position of the next corner reached
             {
                 currentCorner++;
                 if (currentCorner + 1 > path.corners.Length - 1) // End of the path

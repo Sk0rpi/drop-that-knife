@@ -12,13 +12,13 @@ public class Trigger : MonoBehaviour
     private const int BUTTONPRESS = 3;
     
     private List<int> _triggerCases = new List<int>();
-    private List<TriggerValue> _triggerValues = new List<TriggerValue>();
-    public float blinkDelay;
+    private List<TriggerValue> _triggerValues = new List<TriggerValue>();    
     private Timer _timer;
 
     public TriggerConnector triggerConnector;
     public TMP_Text debug_Timer;
-
+    public float blinkDelay;
+    public Transform trailTarget;
     public bool Check_Trigger()
     {
         for (int i = 0; i < _triggerCases.Count; i++)
@@ -75,7 +75,17 @@ public class Trigger : MonoBehaviour
     
     public void Arm_Trigger()
     {
+        // Get the values that are going to be sent to GameController
         blinkDelay = triggerConnector.blinkDelay;
+
+        if (triggerConnector.haveTrail)
+        {
+            trailTarget = triggerConnector.trailTarget;
+        }
+        else
+        {
+            trailTarget = null;
+        }
 
         bool triggerActive = false;
 

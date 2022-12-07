@@ -8,7 +8,8 @@ using UnityEngine.Events;
 
 public class GameController : MonoBehaviour
 {
-    public Animator animator;
+    
+    public Animator animator; // Blink UI Animator
     public TMP_Text debug_Blink;
     public TMP_Text debug_Timer;
 
@@ -16,11 +17,12 @@ public class GameController : MonoBehaviour
     [Header("Starting Blink / Active Blink")]
     public GameObject activeBlink;
 
-    private Trigger _activeTrigger;
-
-    private GameObject player;
     public UnityEvent onBlinkPerformed;
 
+    [HideInInspector]public Transform trailTarget;
+
+    private Trigger _activeTrigger;
+    private GameObject player;
     private Dictionary<Trigger, GameObject> _triggerBlinkRelation = new Dictionary<Trigger, GameObject>();
 
     public static GameController instance;
@@ -74,6 +76,8 @@ public class GameController : MonoBehaviour
                 trigger.triggerConnector = triggerConnector;
                 
                 trigger.Arm_Trigger();
+
+                trailTarget = trigger.trailTarget;
                 
                 _triggerBlinkRelation.Add(trigger, triggerConnector.nextBlink);
             }
@@ -125,6 +129,7 @@ public class GameController : MonoBehaviour
     {
         Trigger trigger = _activeTrigger;
         GameObject nextBlink = _triggerBlinkRelation[trigger];
+
         Debug.Log("Changing Blink...");
 
         // Wait for a delay we can set up in each triggerConnector
@@ -159,7 +164,7 @@ public class GameController : MonoBehaviour
         onBlinkPerformed.Invoke();     // +1 to get the same number as in editor
         
         // Call the trigger arming with the new blink object
-        Arm_Triggers(activeBlink);        
+        Arm_Triggers(activeBlink);
 
         Set_Debug_Blink();
     }
