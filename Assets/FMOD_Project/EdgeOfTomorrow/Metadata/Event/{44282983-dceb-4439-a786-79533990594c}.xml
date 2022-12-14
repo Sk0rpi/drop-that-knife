@@ -5,7 +5,7 @@
 			<value>Scene1_Tension</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{7ad80b71-7f98-4d83-9ca2-bd3ea69eddef}</destination>
@@ -306,7 +306,6 @@
 	<object class="MixerBusEffectChain" id="{994bf1f6-6b24-4962-b011-2a5583694410}">
 		<relationship name="effects">
 			<destination>{3bdea664-bdab-4005-8bea-91a7400c7108}</destination>
-			<destination>{7ce821f4-1535-47b9-99ba-9dc1501fe670}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{4b439426-b830-4ab2-b341-1a6a8b33daea}" />
@@ -358,7 +357,6 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{3bdea664-bdab-4005-8bea-91a7400c7108}" />
-	<object class="SpatialiserEffect" id="{7ce821f4-1535-47b9-99ba-9dc1501fe670}" />
 	<object class="AutomationCurve" id="{c02c87b9-908b-4bba-a81b-477e00097c80}">
 		<relationship name="parameter">
 			<destination>{c983036b-dc44-4e66-b0e6-63467da8aafe}</destination>
