@@ -1,5 +1,39 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-1720774052658915040
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 558a8e2b6826cf840aae193990ba9f2e, type: 3}
+  m_Name: ShadowsMidtonesHighlights
+  m_EditorClassIdentifier: 
+  active: 0
+  shadows:
+    m_OverrideState: 1
+    m_Value: {x: 0.91229594, y: 0.9626369, z: 1, w: 0.16758008}
+  midtones:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 0.8606588, z: 0.6572948, w: 0.1879407}
+  highlights:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 0.96486396, z: 0.71034664, w: 0.000000002639614}
+  shadowsStart:
+    m_OverrideState: 0
+    m_Value: 0
+  shadowsEnd:
+    m_OverrideState: 0
+    m_Value: 0.3
+  highlightsStart:
+    m_OverrideState: 0
+    m_Value: 0.55
+  highlightsEnd:
+    m_OverrideState: 0
+    m_Value: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,6 +49,7 @@ MonoBehaviour:
   components:
   - {fileID: 3218835617256698078}
   - {fileID: 8448208345268693513}
+  - {fileID: -1720774052658915040}
 --- !u!114 &3218835617256698078
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -27,7 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b2db86121404754db890f4c8dfe81b2, type: 3}
   m_Name: Bloom
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   threshold:
     m_OverrideState: 1
     m_Value: 0.88
@@ -76,5 +111,5 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: {x: 1, y: 0.91884434, z: 0.8160223, w: 0.0736102}
   gain:
-    m_OverrideState: 0
-    m_Value: {x: 1, y: 1, z: 1, w: 0.0042375457}
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 0.24588898}
