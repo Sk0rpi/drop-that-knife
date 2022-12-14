@@ -14,6 +14,7 @@ public class KillingBully : MonoBehaviour
     ParticleSystem bloodParticles;
     [SerializeField]
     FMODUnity.StudioParameterTrigger stabParameterTrigger;
+
     bool dead;
 
     private void OnEnable()

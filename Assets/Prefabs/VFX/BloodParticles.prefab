@@ -4311,7 +4311,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.6147481
+          value: 0.3723241
           inSlope: 0.0774435
           outSlope: 0.0774435
           tangentMode: 0
@@ -4344,7 +4344,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.39659882
+          value: 0.2753868
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -9780,4 +9780,4 @@ MonoBehaviour:
       Data2: 1123205784
       Data3: -157978459
       Data4: 1017751939
-    Path: event:/Blood_splatter
+    Path: event:/Gameplay/Blood_splatter

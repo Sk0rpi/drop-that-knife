@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18381508, g: 0.2291119, b: 0.30401897, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1447,6 +1447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e127270b4646d468cacbc805d50841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerUsage: 
   isTimeTrigger: 0
   timeInSec: 0
   isObjectTrigger: 0
@@ -1456,6 +1457,8 @@ MonoBehaviour:
   nextBlink: {fileID: 1866933140}
   movePlayer: 0
   newPosition: {fileID: 0}
+  haveTrail: 0
+  trailTarget: {fileID: 0}
 --- !u!1001 &258983075
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3067,6 +3070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e127270b4646d468cacbc805d50841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerUsage: 
   isTimeTrigger: 1
   timeInSec: 6
   isObjectTrigger: 0
@@ -3076,6 +3080,8 @@ MonoBehaviour:
   nextBlink: {fileID: 823505598}
   movePlayer: 0
   newPosition: {fileID: 0}
+  haveTrail: 0
+  trailTarget: {fileID: 0}
 --- !u!114 &521451337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4687,6 +4693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e127270b4646d468cacbc805d50841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerUsage: 
   isTimeTrigger: 0
   timeInSec: 0
   isObjectTrigger: 1
@@ -4696,6 +4703,8 @@ MonoBehaviour:
   nextBlink: {fileID: 197577912}
   movePlayer: 0
   newPosition: {fileID: 0}
+  haveTrail: 0
+  trailTarget: {fileID: 0}
 --- !u!1 &696879932
 GameObject:
   m_ObjectHideFlags: 0
@@ -10305,6 +10314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e127270b4646d468cacbc805d50841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerUsage: 
   isTimeTrigger: 0
   timeInSec: 0
   isObjectTrigger: 1
@@ -10314,6 +10324,8 @@ MonoBehaviour:
   nextBlink: {fileID: 674313266}
   movePlayer: 0
   newPosition: {fileID: 0}
+  haveTrail: 0
+  trailTarget: {fileID: 0}
 --- !u!114 &823505601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10326,6 +10338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e127270b4646d468cacbc805d50841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerUsage: 
   isTimeTrigger: 0
   timeInSec: 5
   isObjectTrigger: 1
@@ -10335,6 +10348,8 @@ MonoBehaviour:
   nextBlink: {fileID: 521451334}
   movePlayer: 0
   newPosition: {fileID: 0}
+  haveTrail: 0
+  trailTarget: {fileID: 0}
 --- !u!4 &841768666 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3e9f276afe5fc384dbbc3dea4896f05e,
@@ -10608,6 +10623,7 @@ MonoBehaviour:
   gameController: {fileID: 1565040311}
   deathVolume: {fileID: 1632977778}
   bloodParticles: {fileID: 1077324027}
+  stabParameterTrigger: {fileID: 0}
 --- !u!136 &871601828
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11908,6 +11924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e127270b4646d468cacbc805d50841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerUsage: 
   isTimeTrigger: 0
   timeInSec: 0
   isObjectTrigger: 1
@@ -11917,6 +11934,8 @@ MonoBehaviour:
   nextBlink: {fileID: 1828754440}
   movePlayer: 1
   newPosition: {fileID: 1919963647}
+  haveTrail: 0
+  trailTarget: {fileID: 0}
 --- !u!1 &1137831545
 GameObject:
   m_ObjectHideFlags: 0
@@ -13099,6 +13118,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  trailTarget: {fileID: 0}
 --- !u!1 &1567606696
 GameObject:
   m_ObjectHideFlags: 0
@@ -13633,7 +13653,7 @@ MonoBehaviour:
       Data2: 1295567417
       Data3: 610081410
       Data4: 896356278
-    Path: event:/KnifeGrab
+    Path: event:/Gameplay/KnifeGrab
   Event: 
   PlayEvent: 0
   StopEvent: 0
@@ -14423,6 +14443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e127270b4646d468cacbc805d50841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerUsage: 
   isTimeTrigger: 0
   timeInSec: 0
   isObjectTrigger: 0
@@ -14432,6 +14453,8 @@ MonoBehaviour:
   nextBlink: {fileID: 0}
   movePlayer: 0
   newPosition: {fileID: 0}
+  haveTrail: 0
+  trailTarget: {fileID: 0}
 --- !u!1001 &1852744702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15116,6 +15139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e127270b4646d468cacbc805d50841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerUsage: 
   isTimeTrigger: 0
   timeInSec: 0
   isObjectTrigger: 1
@@ -15125,6 +15149,8 @@ MonoBehaviour:
   nextBlink: {fileID: 1111953622}
   movePlayer: 0
   newPosition: {fileID: 0}
+  haveTrail: 0
+  trailTarget: {fileID: 0}
 --- !u!1 &1882282058
 GameObject:
   m_ObjectHideFlags: 0

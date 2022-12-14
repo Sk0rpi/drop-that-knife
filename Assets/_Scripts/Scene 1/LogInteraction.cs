@@ -11,11 +11,16 @@ public class LogInteraction : MonoBehaviour
     [SerializeField]
     TriggerValue triggerValue;
 
+    [SerializeField]
+    FMODUnity.StudioEventEmitter woodCarvedEmitter;
+
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.collider.CompareTag("Killer"))
         {
             woodParticles.Play();
+            if(!woodCarvedEmitter.IsPlaying())
+                woodCarvedEmitter.Play();
 
             totem.position = transform.position;
 
