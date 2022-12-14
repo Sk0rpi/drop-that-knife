@@ -4304,14 +4304,14 @@ ParticleSystem:
     vector0_0:
       serializedVersion: 2
       minMaxState: 2
-      scalar: 0.77
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.54319584
+          value: 0.6147481
           inSlope: 0.0774435
           outSlope: 0.0774435
           tangentMode: 0
@@ -4319,8 +4319,8 @@ ParticleSystem:
           inWeight: 0
           outWeight: 0.18637769
         - serializedVersion: 3
-          time: 0.7328059
-          value: 0.54319584
+          time: 0.73701423
+          value: 1
           inSlope: 0
           outSlope: 0
           tangentMode: 136
@@ -4344,7 +4344,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.27835083
+          value: 0.39659882
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -4352,8 +4352,8 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.7342274
-          value: 0.30388755
+          time: 0.74709827
+          value: 0.7479742
           inSlope: 0.0362131
           outSlope: 0.0362131
           tangentMode: 0
@@ -4362,7 +4362,7 @@ ParticleSystem:
           outWeight: 0.33333334
         - serializedVersion: 3
           time: 1
-          value: 0.5773239
+          value: 0.7925148
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -4900,6 +4900,7 @@ GameObject:
   - component: {fileID: 4323588518702306023}
   - component: {fileID: 4323588518702306022}
   - component: {fileID: 4323588518702306041}
+  - component: {fileID: 1464590501}
   m_Layer: 0
   m_Name: BloodParticles
   m_TagString: Untagged
@@ -9761,3 +9762,22 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &1464590501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4323588518702306040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eae1840bc03c2be4a80fe135d144b907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: -1461163973
+      Data2: 1123205784
+      Data3: -157978459
+      Data4: 1017751939
+    Path: event:/Blood_splatter

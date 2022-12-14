@@ -17896,7 +17896,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0.9317452, g: 1, b: 0.088679194, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -18970,7 +18970,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 1
+    enabled: 0
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -22421,7 +22421,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 791376851}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.99, y: 0, z: 24.64}
+  m_LocalPosition: {x: 7.214, y: 0, z: 24.588}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41217,9 +41217,64 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4323588518413180052, guid: 404e29c157cccc64da9d6ec1e065fa48,
         type: 3}
+      propertyPath: CustomDataModule.vector0_0.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323588518413180052, guid: 404e29c157cccc64da9d6ec1e065fa48,
+        type: 3}
       propertyPath: CollisionModule.m_Planes.Array.data[0]
       value: 
       objectReference: {fileID: 1858435386}
+    - target: {fileID: 4323588518413180052, guid: 404e29c157cccc64da9d6ec1e065fa48,
+        type: 3}
+      propertyPath: CustomDataModule.vector0_0.maxCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323588518413180052, guid: 404e29c157cccc64da9d6ec1e065fa48,
+        type: 3}
+      propertyPath: CustomDataModule.vector0_0.maxCurve.m_Curve.Array.data[1].time
+      value: 0.73701423
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323588518413180052, guid: 404e29c157cccc64da9d6ec1e065fa48,
+        type: 3}
+      propertyPath: CustomDataModule.vector0_0.minCurve.m_Curve.Array.data[1].time
+      value: 0.74709827
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323588518413180052, guid: 404e29c157cccc64da9d6ec1e065fa48,
+        type: 3}
+      propertyPath: CustomDataModule.vector0_0.maxCurve.m_Curve.Array.data[0].value
+      value: 0.6147481
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323588518413180052, guid: 404e29c157cccc64da9d6ec1e065fa48,
+        type: 3}
+      propertyPath: CustomDataModule.vector0_0.maxCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323588518413180052, guid: 404e29c157cccc64da9d6ec1e065fa48,
+        type: 3}
+      propertyPath: CustomDataModule.vector0_0.minCurve.m_Curve.Array.data[0].value
+      value: 0.39659882
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323588518413180052, guid: 404e29c157cccc64da9d6ec1e065fa48,
+        type: 3}
+      propertyPath: CustomDataModule.vector0_0.minCurve.m_Curve.Array.data[1].value
+      value: 0.7479742
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323588518413180052, guid: 404e29c157cccc64da9d6ec1e065fa48,
+        type: 3}
+      propertyPath: CustomDataModule.vector0_0.minCurve.m_Curve.Array.data[2].value
+      value: 0.7925148
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323588518413180052, guid: 404e29c157cccc64da9d6ec1e065fa48,
+        type: 3}
+      propertyPath: CustomDataModule.vector0_0.maxCurve.m_Curve.Array.data[1].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323588518413180052, guid: 404e29c157cccc64da9d6ec1e065fa48,
+        type: 3}
+      propertyPath: CustomDataModule.vector0_0.maxCurve.m_Curve.Array.data[1].outSlope
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4323588518702306022, guid: 404e29c157cccc64da9d6ec1e065fa48,
         type: 3}
       propertyPath: CollisionModule.m_Planes.Array.data[0]
