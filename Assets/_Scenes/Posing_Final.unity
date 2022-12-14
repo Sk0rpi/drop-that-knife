@@ -22902,6 +22902,7 @@ GameObject:
   - component: {fileID: 871601829}
   - component: {fileID: 871601828}
   - component: {fileID: 871601827}
+  - component: {fileID: 871601830}
   m_Layer: 0
   m_Name: Bully
   m_TagString: Killable
@@ -22942,6 +22943,7 @@ MonoBehaviour:
   gameController: {fileID: 1565040311}
   deathVolume: {fileID: 1632977778}
   bloodParticles: {fileID: 1077324027}
+  stabParameterTrigger: {fileID: 871601830}
 --- !u!136 &871601828
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -22972,6 +22974,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &871601830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871601825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Emitters:
+  - Target: {fileID: 967187207}
+    Params:
+    - Name: BullyKilled
+      Value: 2
+  TriggerEvent: 0
 --- !u!1 &879939187 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 404348849184884979, guid: 812b5f43dbba08e4ab592db3a2d9f68a,
@@ -27754,6 +27775,7 @@ GameObject:
   - component: {fileID: 967187206}
   - component: {fileID: 967187205}
   - component: {fileID: 967187204}
+  - component: {fileID: 967187207}
   m_Layer: 0
   m_Name: BLINK 7
   m_TagString: Untagged
@@ -27828,6 +27850,36 @@ Transform:
   m_Father: {fileID: 1565040310}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &967187207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967187203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1143482755
+      Data2: 1144642795
+      Data3: 1400473255
+      Data4: 1280938041
+    Path: event:/Scene1_Tension
+  Event: 
+  PlayEvent: 11
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &975182325
 GameObject:
   m_ObjectHideFlags: 0
@@ -31547,6 +31599,31 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 6011165638476352598}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1464590499 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4323588518702306040, guid: 404e29c157cccc64da9d6ec1e065fa48,
+    type: 3}
+  m_PrefabInstance: {fileID: 4323588518460166454}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1464590501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464590499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eae1840bc03c2be4a80fe135d144b907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: -1461163973
+      Data2: 1123205784
+      Data3: -157978459
+      Data4: 1017751939
+    Path: event:/Blood_splatter
 --- !u!1001 &1469289515
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33508,6 +33585,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1469999675}
   - component: {fileID: 1469999674}
+  - component: {fileID: 1469999676}
   m_Layer: 0
   m_Name: BlinkChanger
   m_TagString: Untagged
@@ -33551,6 +33629,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1469999676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469999673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -2123206892
+      Data2: 1280014231
+      Data3: -486539384
+      Data4: -1294360923
+    Path: event:/Blink_Transition
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1477377800
 GameObject:
   m_ObjectHideFlags: 0
@@ -34610,6 +34718,7 @@ GameObject:
   - component: {fileID: 1620918027}
   - component: {fileID: 1620918028}
   - component: {fileID: 1623074665}
+  - component: {fileID: 1623074666}
   m_Layer: 0
   m_Name: M9_Knife
   m_TagString: Killer
@@ -34740,6 +34849,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1620918028}
         m_TargetAssemblyTypeName: ChangeGrabablePose, Assembly-CSharp
         m_MethodName: ResetTransform
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1623074666}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -34927,6 +35048,36 @@ MonoBehaviour:
       Data3: 610081410
       Data4: 896356278
     Path: event:/KnifeGrab
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1623074666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620883880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1802210060
+      Data2: 1135918214
+      Data3: 1515725988
+      Data4: -1251273992
+    Path: event:/Knife_to_Belt
   Event: 
   PlayEvent: 0
   StopEvent: 0
@@ -35779,6 +35930,7 @@ GameObject:
   - component: {fileID: 1828754441}
   - component: {fileID: 1828754443}
   - component: {fileID: 1828754442}
+  - component: {fileID: 1828754444}
   m_Layer: 0
   m_Name: BLINK Final
   m_TagString: Untagged
@@ -35853,6 +36005,25 @@ MonoBehaviour:
   newPosition: {fileID: 0}
   haveTrail: 0
   trailTarget: {fileID: 0}
+--- !u!114 &1828754444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828754440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Emitters:
+  - Target: {fileID: 967187207}
+    Params:
+    - Name: BullyKilled
+      Value: 1
+  TriggerEvent: 11
 --- !u!1001 &1852744702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41046,79 +41217,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4323588518413180052, guid: 404e29c157cccc64da9d6ec1e065fa48,
         type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4323588518413180052, guid: 404e29c157cccc64da9d6ec1e065fa48,
-        type: 3}
-      propertyPath: InitialModule.startSizeY.scalar
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4323588518413180052, guid: 404e29c157cccc64da9d6ec1e065fa48,
-        type: 3}
-      propertyPath: InitialModule.startSize.minScalar
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4323588518413180052, guid: 404e29c157cccc64da9d6ec1e065fa48,
-        type: 3}
-      propertyPath: InitialModule.startSizeY.minScalar
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4323588518413180052, guid: 404e29c157cccc64da9d6ec1e065fa48,
-        type: 3}
       propertyPath: CollisionModule.m_Planes.Array.data[0]
       value: 
       objectReference: {fileID: 1858435386}
     - target: {fileID: 4323588518702306022, guid: 404e29c157cccc64da9d6ec1e065fa48,
         type: 3}
-      propertyPath: looping
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4323588518702306022, guid: 404e29c157cccc64da9d6ec1e065fa48,
-        type: 3}
-      propertyPath: simulationSpeed
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4323588518702306022, guid: 404e29c157cccc64da9d6ec1e065fa48,
-        type: 3}
-      propertyPath: InitialModule.size3D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4323588518702306022, guid: 404e29c157cccc64da9d6ec1e065fa48,
-        type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4323588518702306022, guid: 404e29c157cccc64da9d6ec1e065fa48,
-        type: 3}
-      propertyPath: InitialModule.startSizeY.scalar
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4323588518702306022, guid: 404e29c157cccc64da9d6ec1e065fa48,
-        type: 3}
-      propertyPath: InitialModule.startSize.minScalar
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4323588518702306022, guid: 404e29c157cccc64da9d6ec1e065fa48,
-        type: 3}
-      propertyPath: InitialModule.startSizeY.minScalar
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4323588518702306022, guid: 404e29c157cccc64da9d6ec1e065fa48,
-        type: 3}
-      propertyPath: InitialModule.gravityModifier.scalar
-      value: 1.42
-      objectReference: {fileID: 0}
-    - target: {fileID: 4323588518702306022, guid: 404e29c157cccc64da9d6ec1e065fa48,
-        type: 3}
       propertyPath: CollisionModule.m_Planes.Array.data[0]
       value: 
       objectReference: {fileID: 1858435386}
-    - target: {fileID: 4323588518702306022, guid: 404e29c157cccc64da9d6ec1e065fa48,
-        type: 3}
-      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 4323588518702306023, guid: 404e29c157cccc64da9d6ec1e065fa48,
         type: 3}
       propertyPath: m_RootOrder

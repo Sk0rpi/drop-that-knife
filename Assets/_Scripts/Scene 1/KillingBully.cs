@@ -1,6 +1,7 @@
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Rendering;
+using FMOD;
 public class KillingBully : MonoBehaviour
 {
     [SerializeField]
@@ -11,7 +12,8 @@ public class KillingBully : MonoBehaviour
     Volume deathVolume;
     [SerializeField]
     ParticleSystem bloodParticles;
-
+    [SerializeField]
+    FMODUnity.StudioParameterTrigger stabParameterTrigger;
     bool dead;
 
     private void OnEnable()
@@ -37,6 +39,8 @@ public class KillingBully : MonoBehaviour
             dead = true;
             animator.SetTrigger("Death");
             DOVirtual.Float(1, 0.5f, 2f, ChangeTimeScale);
+
+            stabParameterTrigger.TriggerParameters();
 
             // Particles
             ContactPoint contact = collision.contacts[0];

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{dad8558e-0eb4-42cb-92db-1a758dfbab31}">
+		<property name="name">
+			<value>BullyKilled</value>
+		</property>
+		<relationship name="folder">
+			<destination>{a1b8102e-ed15-463a-bf6d-7ccc63a2386c}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{675b4e0d-9106-4ddb-8048-5024f1426e88}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{675b4e0d-9106-4ddb-8048-5024f1426e88}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
