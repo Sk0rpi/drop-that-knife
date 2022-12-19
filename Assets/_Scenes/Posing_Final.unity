@@ -6113,8 +6113,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.1
-      minScalar: 0.05
+      scalar: 0.06
+      minScalar: 0.02
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -34184,8 +34184,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.1
-      minScalar: 0.05
+      scalar: 0.06
+      minScalar: 0.02
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -54195,21 +54195,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GodRay
       objectReference: {fileID: 0}
-    - target: {fileID: 7592566680974548335, guid: 87fe9e44a888ba1428ce0dd66665c75a,
-        type: 3}
-      propertyPath: ShapeModule.m_Scale.x
-      value: 2.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 7592566680974548335, guid: 87fe9e44a888ba1428ce0dd66665c75a,
-        type: 3}
-      propertyPath: ShapeModule.m_Scale.y
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7592566680974548335, guid: 87fe9e44a888ba1428ce0dd66665c75a,
-        type: 3}
-      propertyPath: ShapeModule.m_Scale.z
-      value: 1.46
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87fe9e44a888ba1428ce0dd66665c75a, type: 3}
 --- !u!1001 &7851442610734425533
@@ -54442,6 +54427,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372740013409230728, guid: 96450dab365cb884a83ee7daa321f17c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5403114091634538014, guid: 96450dab365cb884a83ee7daa321f17c,
         type: 3}
