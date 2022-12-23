@@ -5,15 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/_Scenes/Marc's Sample.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 0
-    path: Assets/_Scenes/Empty.unity
-    guid: c3e67c64329a5af46982524271aaeed2
   - enabled: 1
-    path: Assets/_Scenes/Posing_Final.unity
-    guid: 27ca0b979e367a14abe2f32a5300727f
+    path: Assets/_Scenes/Game/Menu.unity
+    guid: beef0dded6916154eae21c1e4f5868d2
+  - enabled: 1
+    path: Assets/_Scenes/Game/Chapter_1.unity
+    guid: d09eb15dcdd8fb144ad3aea0e41b558b
+  - enabled: 1
+    path: Assets/_Scenes/Game/Chapter_2.unity
+    guid: 42c8941fcdca90a44b9d3d154ad84c28
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: c8710e8f50310774eba028311c68ef1c,
       type: 2}
