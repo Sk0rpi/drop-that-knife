@@ -10,19 +10,47 @@ public class VRSettings : MonoBehaviour
 
     [SerializeField] TeleportationProvider teleportationProvider;
     [SerializeField] ActivateTeleportationRay activateTeleportationRay;
+    [SerializeField] GameObject teleportationRayObject;
 
     [Header("Turn")]
     [SerializeField] ContinuousTurnProviderBase continuousTurnProvider;
 
     [SerializeField] SnapTurnProviderBase snapTurnProvider;
 
-    
+    [Header("Change Defaults")]
+    [SerializeField] static int moveType = 1;
+    [SerializeField] static int turnType = 0;
+
+    private void Awake()
+    {
+        if(moveType == 0)
+        {
+            SetTeleportMove();
+        }
+        else
+        {
+            SetContinuousMove();
+        }
+
+        if(turnType == 0)
+        {
+            SetSnapTurn();
+        }
+        else
+        {
+            SetContinuousTurn();
+        }
+    }
+
     void SetContinuousMove()
     {
         teleportationProvider.enabled = false;
         activateTeleportationRay.enabled = false;
+        teleportationRayObject.SetActive(false);
 
         continuousMoveProvider.enabled = true;
+
+        moveType = 1;
     }
 
     void SetTeleportMove()
@@ -31,6 +59,9 @@ public class VRSettings : MonoBehaviour
 
         teleportationProvider.enabled = true;
         activateTeleportationRay.enabled = true;
+        teleportationRayObject.SetActive(true);
+
+        moveType = 0;
     }
 
     void SetContinuousTurn()
@@ -38,6 +69,8 @@ public class VRSettings : MonoBehaviour
         snapTurnProvider.enabled = false;
 
         continuousTurnProvider.enabled = true;
+
+        turnType = 1;
     }
 
     void SetSnapTurn()
@@ -45,6 +78,8 @@ public class VRSettings : MonoBehaviour
         continuousTurnProvider.enabled = false;
 
         snapTurnProvider.enabled = true;
+
+        turnType = 0;
     }
     
     public void SetMove(int index)
