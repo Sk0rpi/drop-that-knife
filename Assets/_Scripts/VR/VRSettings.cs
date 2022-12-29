@@ -18,7 +18,7 @@ public class VRSettings : MonoBehaviour
     [SerializeField] SnapTurnProviderBase snapTurnProvider;
 
     [Header("Change Defaults")]
-    [SerializeField] static int moveType = 1;
+    [SerializeField] static int moveType = 0;
     [SerializeField] static int turnType = 0;
 
     private void Awake()
@@ -44,6 +44,7 @@ public class VRSettings : MonoBehaviour
 
     void SetContinuousMove()
     {
+        Debug.Log("Set ContinuousMove");
         teleportationProvider.enabled = false;
         activateTeleportationRay.enabled = false;
         teleportationRayObject.SetActive(false);
@@ -55,6 +56,7 @@ public class VRSettings : MonoBehaviour
 
     void SetTeleportMove()
     {
+        Debug.Log("Set SnapMove");
         continuousMoveProvider.enabled = false;
 
         teleportationProvider.enabled = true;
@@ -66,6 +68,7 @@ public class VRSettings : MonoBehaviour
 
     void SetContinuousTurn()
     {
+        Debug.Log("Set ContinuousTurn");
         snapTurnProvider.enabled = false;
 
         continuousTurnProvider.enabled = true;
@@ -75,6 +78,7 @@ public class VRSettings : MonoBehaviour
 
     void SetSnapTurn()
     {
+        Debug.Log("Set SnapTurn");
         continuousTurnProvider.enabled = false;
 
         snapTurnProvider.enabled = true;
@@ -99,12 +103,11 @@ public class VRSettings : MonoBehaviour
         if(index == 0)
         {
             SetSnapTurn();
-            Debug.Log("Set SnapTurn");
+            
         }
         else
         {
             SetContinuousTurn();
-            Debug.Log("Set ContinuousTurn");
         }
     }
 }
