@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: S1B7-Bully
   m_EditorClassIdentifier: 
   text: Yo, this is my territory.
+  shadowColor: {r: 0.6039216, g: 0, b: 0.023529412, a: 1}

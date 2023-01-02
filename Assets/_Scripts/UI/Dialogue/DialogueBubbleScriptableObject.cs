@@ -7,4 +7,5 @@ public class DialogueBubbleScriptableObject : ScriptableObject
 {
     [TextArea(10, 100)]
     public string text;
+    public Color shadowColor;
 }

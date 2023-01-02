@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: S1B3
   m_EditorClassIdentifier: 
   text: Let's carve some wood.
+  shadowColor: {r: 0.4862745, g: 0.7882353, b: 0.8, a: 1}

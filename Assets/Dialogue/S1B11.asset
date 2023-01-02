@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: S1B11
   m_EditorClassIdentifier: 
   text: You want some too, fucker?
+  shadowColor: {r: 0.6039216, g: 0, b: 0.023529412, a: 1}
