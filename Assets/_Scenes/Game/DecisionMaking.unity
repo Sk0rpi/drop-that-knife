@@ -7431,8 +7431,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Run Away
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0914075269120694e8d0fb7692687ea4, type: 2}
+  m_sharedMaterial: {fileID: -6448964355784889656, guid: 0914075269120694e8d0fb7692687ea4,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7456,7 +7457,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16.75
+  m_fontSize: 13.8
   m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8700,8 +8701,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Stay with your friend
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0914075269120694e8d0fb7692687ea4, type: 2}
+  m_sharedMaterial: {fileID: -6448964355784889656, guid: 0914075269120694e8d0fb7692687ea4,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8725,7 +8727,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10.55
+  m_fontSize: 8.25
   m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 1
