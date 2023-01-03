@@ -48,11 +48,19 @@ public class KillingBully : MonoBehaviour
             bloodParticles.transform.position = contact.point;
             bloodParticles.transform.forward = contact.normal;
             bloodParticles.Play();
+
+            Invoke("ChangeScene", 5f);
         }
     }
 
     private void ChangeTimeScale(float x)
     {
         Time.timeScale = x;
+    }
+
+    private void ChangeScene()
+    {
+        Time.timeScale = 1;
+        SceneJump.instance.ChangeScene(2);
     }
 }

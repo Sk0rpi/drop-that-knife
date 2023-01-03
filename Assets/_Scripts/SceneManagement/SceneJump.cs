@@ -62,8 +62,10 @@ public class SceneJump : MonoBehaviour
         {
             SceneManager.LoadScene(levelIndex);
         }
+    }
 
-        
-        
+    public void QuitApplication()
+    {
+        Application.Quit();
     }
 }
