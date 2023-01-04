@@ -6,28 +6,30 @@ public class TriggerConnector : MonoBehaviour
 {
     [Header("What is this trigger for? (only dev info)")]
     public string triggerUsage;
+
     [Space]
-    [Header("Time Trigger")]
+    [Header("Trigger Type")]
     public bool isTimeTrigger;
     public int timeInSec;
     [Space]
-    [Header("Object Trigger")]
     public bool isObjectTrigger;
     public GameObject toObserve;
-
     [Space]
-    [Header("Button Trigger")]
     [Tooltip("If the button is a button trigger, " +
         "to observe should be the same object and this object should have " +
         "a TriggerCheckerInput component")]
     public bool isButtonTrigger;
 
     [Space]
-    [Header("Blink Delay (real time)")]
+    [Header("Blink Delay (real time, before the fade out)")]
     public float blinkDelay = 0f;
 
     [Space]
-    [Header("Where does this trigger leads?")]
+    [Header("BlackScreenDuration")]
+    public float blinkDuration = 0f;
+
+    [Space]
+    [Header("Where does this trigger lead?")]
     public GameObject nextBlink;
 
     [Space]

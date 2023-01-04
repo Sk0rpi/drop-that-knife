@@ -154,12 +154,16 @@ public class GameController : MonoBehaviour
         }
 
         activeBlink = nextBlink;
+        
+        // Activate new blink object
+        activeBlink.SetActive(true);
+
+        // Wait for a delay during the blackscreen
+        yield return new WaitForSecondsRealtime(trigger.blinkDuration);
+
         // Trigger Blink-Animation Fade_in
         animator.SetTrigger("Fade_in");
 
-        // Activate new blink object
-        activeBlink.SetActive(true);
-        
         // Callbacks for blinks
         onBlinkPerformed.Invoke();     // +1 to get the same number as in editor
         

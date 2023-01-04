@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{371537e1-b7b0-4fa2-9f9c-e2adea96eac9}">
+		<property name="assetPath">
+			<value>SoundAssets/Action_BullyHits.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.615827664399093</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{c2f6f9b0-29fe-48ab-a540-19906f3e4f9b}</destination>
+		</relationship>
+	</object>
+</objects>

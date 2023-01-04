@@ -3810,6 +3810,7 @@ MonoBehaviour:
   toObserve: {fileID: 118422455}
   isButtonTrigger: 1
   blinkDelay: 0
+  blinkDuration: 0
   nextBlink: {fileID: 348135548}
   movePlayer: 0
   newPosition: {fileID: 0}
@@ -10649,6 +10650,7 @@ MonoBehaviour:
   toObserve: {fileID: 1195930041}
   isButtonTrigger: 1
   blinkDelay: 0
+  blinkDuration: 0
   nextBlink: {fileID: 1866933140}
   movePlayer: 0
   newPosition: {fileID: 0}
@@ -12451,6 +12453,7 @@ MonoBehaviour:
   toObserve: {fileID: 348135548}
   isButtonTrigger: 1
   blinkDelay: 0
+  blinkDuration: 0
   nextBlink: {fileID: 1828754440}
   movePlayer: 1
   newPosition: {fileID: 812309967}
@@ -13998,7 +14001,7 @@ MonoBehaviour:
       Data2: 1240930677
       Data3: 857303697
       Data4: 1370621481
-    Path: event:/Scene1_Environment
+    Path: event:/Scene 1/Scene1_Environment
   Event: 
   PlayEvent: 1
   StopEvent: 0
@@ -14918,6 +14921,7 @@ MonoBehaviour:
   toObserve: {fileID: 521451334}
   isButtonTrigger: 1
   blinkDelay: 0
+  blinkDuration: 0
   nextBlink: {fileID: 823505598}
   movePlayer: 0
   newPosition: {fileID: 0}
@@ -20870,6 +20874,7 @@ MonoBehaviour:
   toObserve: {fileID: 879939187}
   isButtonTrigger: 0
   blinkDelay: 0
+  blinkDuration: 0
   nextBlink: {fileID: 197577912}
   movePlayer: 0
   newPosition: {fileID: 0}
@@ -26028,6 +26033,7 @@ MonoBehaviour:
   toObserve: {fileID: 1620883880}
   isButtonTrigger: 0
   blinkDelay: 0
+  blinkDuration: 0
   nextBlink: {fileID: 674313266}
   movePlayer: 0
   newPosition: {fileID: 0}
@@ -33176,6 +33182,7 @@ MonoBehaviour:
   toObserve: {fileID: 967187203}
   isButtonTrigger: 1
   blinkDelay: 0
+  blinkDuration: 0
   nextBlink: {fileID: 975182325}
   movePlayer: 0
   newPosition: {fileID: 0}
@@ -33219,7 +33226,7 @@ MonoBehaviour:
       Data2: 1144642795
       Data3: 1400473255
       Data4: 1280938041
-    Path: event:/Non_diegetic/Scene1_Tension
+    Path: event:/Scene 1/Scene1_Tension
   Event: 
   PlayEvent: 11
   StopEvent: 2
@@ -33293,6 +33300,7 @@ MonoBehaviour:
   toObserve: {fileID: 975182325}
   isButtonTrigger: 1
   blinkDelay: 0
+  blinkDuration: 0
   nextBlink: {fileID: 1572423811}
   movePlayer: 0
   newPosition: {fileID: 0}
@@ -33550,6 +33558,7 @@ MonoBehaviour:
   toObserve: {fileID: 258983076}
   isButtonTrigger: 0
   blinkDelay: 0
+  blinkDuration: 0
   nextBlink: {fileID: 967187203}
   movePlayer: 0
   newPosition: {fileID: 0}
@@ -44198,7 +44207,7 @@ MonoBehaviour:
       Data2: 1280014231
       Data3: -486539384
       Data4: -1294360923
-    Path: event:/Non_diegetic/Blink_Transition
+    Path: event:/Gameplay/Blink_Transition
   Event: 
   PlayEvent: 0
   StopEvent: 0
@@ -44963,6 +44972,7 @@ MonoBehaviour:
   toObserve: {fileID: 1572423811}
   isButtonTrigger: 1
   blinkDelay: 0
+  blinkDuration: 0
   nextBlink: {fileID: 118422455}
   movePlayer: 0
   newPosition: {fileID: 0}
@@ -46513,6 +46523,7 @@ MonoBehaviour:
   toObserve: {fileID: 1828754440}
   isButtonTrigger: 1
   blinkDelay: 0
+  blinkDuration: 0
   nextBlink: {fileID: 0}
   movePlayer: 0
   newPosition: {fileID: 0}
@@ -49101,6 +49112,7 @@ MonoBehaviour:
   toObserve: {fileID: 1148733010}
   isButtonTrigger: 0
   blinkDelay: 2
+  blinkDuration: 0
   nextBlink: {fileID: 1111953622}
   movePlayer: 0
   newPosition: {fileID: 0}

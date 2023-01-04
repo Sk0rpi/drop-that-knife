@@ -18,6 +18,7 @@ public class Trigger : MonoBehaviour
     public TriggerConnector triggerConnector;
     public TMP_Text debug_Timer;
     public float blinkDelay;
+    public float blinkDuration;
     public Transform trailTarget;
     public bool Check_Trigger()
     {
@@ -77,6 +78,7 @@ public class Trigger : MonoBehaviour
     {
         // Get the values that are going to be sent to GameController
         blinkDelay = triggerConnector.blinkDelay;
+        blinkDuration = triggerConnector.blinkDuration;
 
         if (triggerConnector.haveTrail)
         {

@@ -5104,7 +5104,7 @@ MonoBehaviour:
       Data2: 1340997716
       Data3: -50734147
       Data4: -682773281
-    Path: event:/Gameplay/Wood_Grab
+    Path: event:/Scene 1/Wood_Grab
   Event: 
   PlayEvent: 0
   StopEvent: 0
@@ -5150,7 +5150,7 @@ MonoBehaviour:
       Data2: 1285960840
       Data3: -1786335328
       Data4: 787201436
-    Path: event:/Gameplay/Wood_Carving
+    Path: event:/Scene 1/Wood_Carving
   Event: 
   PlayEvent: 0
   StopEvent: 0
