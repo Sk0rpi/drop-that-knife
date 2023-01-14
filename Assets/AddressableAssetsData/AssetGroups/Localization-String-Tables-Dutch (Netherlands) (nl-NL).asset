@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Dutch (Netherlands) (nl-NL)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Dutch (Netherlands) (nl-NL)
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 316487aead210b3419fcc46c849cf399
+  m_SerializeEntries:
+  - m_GUID: fcc0ac7283bb6bf4a8f8fb026676f62b
+    m_Address: MenuStrings_nl-NL
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl-NL
+    - Preload
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 93184eee73b685c43bb7231f911c55cb, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: fb7d6994f397138468605d1af704b5e6, type: 2}
+    - {fileID: 11400000, guid: 0960442a0aa45c64f89721daead2e6f1, type: 2}

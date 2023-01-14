@@ -378,3 +378,11 @@ MonoBehaviour:
   bubbleText: {fileID: 0}
   shadow: {fileID: 1772593414222677465}
   text: {fileID: 8987565578360337565}
+  loclizedObject:
+    m_TableReference:
+      m_TableCollectionName: GUID:7025dd1e515f3b544bc0b49b2c90a6dd
+    m_TableEntryReference:
+      m_KeyId: 329513865216
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0

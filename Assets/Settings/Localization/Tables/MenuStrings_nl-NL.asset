@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: MenuStrings_nl-NL
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: nl-NL
+  m_SharedData: {fileID: 11400000, guid: f6c1c3403c9723f4f87c426f261a0423, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 27800801280
+    m_Localized: Play(NL)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2324681363456
+    m_Localized: Settings(NL)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2369786908672
+    m_Localized: Quit(NL)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3882743664640
+    m_Localized: Turn type (NL)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4039417696256
+    m_Localized: Movement type (NL)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4143113474048
+    m_Localized: Sound (NL)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4411209191424
+    m_Localized: Back (NL)
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

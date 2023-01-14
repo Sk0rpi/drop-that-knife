@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 754e9f7a79394f348b3fb9edc8dced58, type: 3}
   m_Name: S1B1
   m_EditorClassIdentifier: 
-  text: Hey bro! Check this out...
+  text_eng: Hey bro check this out.
+  text_nl: Hey bro check this out. (NL)
   shadowColor: {r: 0.4862745, g: 0.7882353, b: 0.8, a: 1}

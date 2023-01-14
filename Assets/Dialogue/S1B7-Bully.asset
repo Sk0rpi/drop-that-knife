@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 754e9f7a79394f348b3fb9edc8dced58, type: 3}
   m_Name: S1B7-Bully
   m_EditorClassIdentifier: 
-  text: Yo, this is my territory.
+  text_eng: Hey rats, what are you doing in my territory?
+  text_nl: 
   shadowColor: {r: 0.6039216, g: 0, b: 0.023529412, a: 1}
