@@ -42,6 +42,11 @@ public class TriggerConnector : MonoBehaviour
     public bool haveTrail = false;
     public Transform trailTarget;
 
+    [Space] [Header("Flags")]
+    public bool setFlagTrue;
+    public GameObject flag;
+    
+    
     private void Start()    // !! DANGEROUS !! Button trigger and object trigger are not compatible
     {
         if(isButtonTrigger)
