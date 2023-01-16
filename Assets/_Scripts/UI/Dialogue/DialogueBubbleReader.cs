@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
 
+[ExecuteAlways]
 public class DialogueBubbleReader : MonoBehaviour
 {
     public DialogueBubbleScriptableObject bubbleText;
@@ -15,10 +16,24 @@ public class DialogueBubbleReader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        text.text = bubbleText.text_nl;
-        shadow.color = bubbleText.shadowColor;
+        UpdateBubble();
+    }
 
-        LocalizationSettings.SelectedLocaleChanged += LocalizeTextBubble;
+    private void OnValidate()
+    {
+        // In editor update the bubble as needed
+        UpdateBubble();
+    }
+
+    private void UpdateBubble()
+    {
+        if (bubbleText != null)
+        {
+            text.text = bubbleText.text_nl;
+            shadow.color = bubbleText.shadowColor;
+
+            LocalizationSettings.SelectedLocaleChanged += LocalizeTextBubble;
+        }
     }
 
     private void OnDestroy()

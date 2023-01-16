@@ -28,7 +28,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.00000035762787}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5516689599905997116}
   m_RootOrder: 1
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sample text
+  m_text: It was you guys! (NL)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e7de71efed2ae634290b099611ce1efa, type: 2}
   m_sharedMaterial: {fileID: 4302506301912331344, guid: e7de71efed2ae634290b099611ce1efa,
@@ -94,17 +94,17 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.15
+  m_fontSize: 0.16
   m_fontSizeBase: 0.1
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 0.004
-  m_fontSizeMax: 3
+  m_fontSizeMin: 0.1
+  m_fontSizeMax: 0.16
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -3.93
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.08378878, y: 0.08697629, z: 0.04044813, w: 0.06840253}
+  m_margin: {x: 0.054919153, y: 0.040513277, z: 0.02821058, w: 0.06840253}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9433962, g: 0.9433962, b: 0.9433962, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -316,7 +316,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7812976332657721517}
-  m_LocalRotation: {x: 0, y: 0.41689956, z: 0, w: 0.9089526}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 36.296}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -324,11 +324,11 @@ RectTransform:
   - {fileID: 5516689599905997116}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 49.278, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 4.323, y: 0.794}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 2.5, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7812976332657721519
 MonoBehaviour:
@@ -378,11 +378,3 @@ MonoBehaviour:
   bubbleText: {fileID: 0}
   shadow: {fileID: 1772593414222677465}
   text: {fileID: 8987565578360337565}
-  loclizedObject:
-    m_TableReference:
-      m_TableCollectionName: GUID:7025dd1e515f3b544bc0b49b2c90a6dd
-    m_TableEntryReference:
-      m_KeyId: 329513865216
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0

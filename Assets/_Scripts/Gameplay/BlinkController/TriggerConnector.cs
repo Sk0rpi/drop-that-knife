@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TriggerConnector : MonoBehaviour
 {
@@ -41,6 +42,10 @@ public class TriggerConnector : MonoBehaviour
     [Header("Trail")]
     public bool haveTrail = false;
     public Transform trailTarget;
+
+    [Space]
+    [Header("Events on finish")]
+    public UnityEvent onBlinkFinished;
 
     private void Start()    // !! DANGEROUS !! Button trigger and object trigger are not compatible
     {
