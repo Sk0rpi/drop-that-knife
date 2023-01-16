@@ -17,15 +17,10 @@ public class KillingBully : MonoBehaviour
 
     bool dead;
 
-    private void OnEnable()
-    {
-        gameController.onBlinkPerformed.AddListener(ChangeDeathVolume);
-    }
-
     public void ChangeDeathVolume()
     {
         // If chanching to blink n6, add the new volume
-        DOVirtual.Float(0, 1, 2f, ChangeGlobalVolumeWeight);
+        DOVirtual.Float(0, 1, 4f, ChangeGlobalVolumeWeight);
     }
 
     public void ChangeGlobalVolumeWeight(float x)

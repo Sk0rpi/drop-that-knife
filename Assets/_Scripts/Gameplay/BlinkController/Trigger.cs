@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Trigger : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class Trigger : MonoBehaviour
 
     public Flagtag flag;
     public bool setFlagTrue;
+
+    public UnityEvent onBlinkFinished;
 
     public bool Check_Trigger()
     {
@@ -83,6 +86,7 @@ public class Trigger : MonoBehaviour
         // Get the values that are going to be sent to GameController
         blinkDelay = triggerConnector.blinkDelay;
         blinkDuration = triggerConnector.blinkDuration;
+        onBlinkFinished = triggerConnector.onBlinkFinished;
 
         if (triggerConnector.haveTrail)
         {

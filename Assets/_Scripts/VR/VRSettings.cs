@@ -23,23 +23,7 @@ public class VRSettings : MonoBehaviour
 
     private void Awake()
     {
-        if(moveType == 0)
-        {
-            SetTeleportMove();
-        }
-        else
-        {
-            SetContinuousMove();
-        }
-
-        if(turnType == 0)
-        {
-            SetSnapTurn();
-        }
-        else
-        {
-            SetContinuousTurn();
-        }
+        ActivateMovement();
     }
 
     void SetContinuousMove()
@@ -104,6 +88,36 @@ public class VRSettings : MonoBehaviour
         {
             SetSnapTurn();
             
+        }
+        else
+        {
+            SetContinuousTurn();
+        }
+    }
+
+    public void DeactivateMovement()
+    {
+        teleportationProvider.enabled = false;
+        activateTeleportationRay.enabled = false;
+        teleportationRayObject.SetActive(false);
+
+        continuousMoveProvider.enabled = false;
+    }
+
+    public void ActivateMovement()
+    {
+        if (moveType == 0)
+        {
+            SetTeleportMove();
+        }
+        else
+        {
+            SetContinuousMove();
+        }
+
+        if (turnType == 0)
+        {
+            SetSnapTurn();
         }
         else
         {

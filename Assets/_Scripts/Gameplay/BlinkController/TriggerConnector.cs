@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TriggerConnector : MonoBehaviour
 {
@@ -45,8 +46,11 @@ public class TriggerConnector : MonoBehaviour
     [Space] [Header("Flags")]
     public bool setFlagTrue;
     public GameObject flag;
-    
-    
+
+    [Space]
+    [Header("Events on finish")]
+    public UnityEvent onBlinkFinished;
+
     private void Start()    // !! DANGEROUS !! Button trigger and object trigger are not compatible
     {
         if(isButtonTrigger)

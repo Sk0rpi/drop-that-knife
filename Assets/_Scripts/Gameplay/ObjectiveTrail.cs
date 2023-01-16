@@ -30,6 +30,7 @@ public class ObjectiveTrail : MonoBehaviour
         InvokeRepeating("CalculatePath", 0f, 2f);
     }
 
+    // This is called every 2 seconds, in order to update the path.
     void CalculatePath()
     {
         if (target != null)

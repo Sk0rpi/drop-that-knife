@@ -5,6 +5,7 @@ using TMPro;
 using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.AI;
 
 public class GameController : MonoBehaviour
 {
@@ -130,6 +131,8 @@ public class GameController : MonoBehaviour
         Trigger trigger = _activeTrigger;
         GameObject nextBlink = _triggerBlinkRelation[trigger];
 
+        _activeTrigger.onBlinkFinished.Invoke();
+
         Debug.Log("Changing Blink...");
         
         Check_Flag_Set(_activeTrigger);
@@ -150,10 +153,14 @@ public class GameController : MonoBehaviour
 
         _triggerBlinkRelation.Clear();
         
+        // If the player must be moved
         if (trigger.triggerConnector.movePlayer)
         {
+            NavMeshAgent navMeshAgent = player.GetComponent<NavMeshAgent>();
+            navMeshAgent.enabled = false;
             player.transform.position = trigger.triggerConnector.newPosition.position;
             player.transform.rotation = trigger.triggerConnector.newPosition.rotation;
+            navMeshAgent.enabled = true;
         }
 
         activeBlink = nextBlink;
@@ -168,7 +175,7 @@ public class GameController : MonoBehaviour
         animator.SetTrigger("Fade_in");
 
         // Callbacks for blinks
-        onBlinkPerformed.Invoke();     // +1 to get the same number as in editor
+        onBlinkPerformed.Invoke();   
         
         // Call the trigger arming with the new blink object
         Arm_Triggers(activeBlink);
