@@ -3841,6 +3841,8 @@ MonoBehaviour:
   newPosition: {fileID: 0}
   haveTrail: 0
   trailTarget: {fileID: 0}
+  setFlagTrue: 0
+  flag: {fileID: 0}
   onBlinkFinished:
     m_PersistentCalls:
       m_Calls: []
@@ -5878,6 +5880,8 @@ MonoBehaviour:
   newPosition: {fileID: 0}
   haveTrail: 1
   trailTarget: {fileID: 25213368}
+  setFlagTrue: 0
+  flag: {fileID: 0}
   onBlinkFinished:
     m_PersistentCalls:
       m_Calls: []
@@ -7684,6 +7688,8 @@ MonoBehaviour:
   newPosition: {fileID: 812309967}
   haveTrail: 0
   trailTarget: {fileID: 0}
+  setFlagTrue: 0
+  flag: {fileID: 0}
   onBlinkFinished:
     m_PersistentCalls:
       m_Calls:
@@ -7939,6 +7945,38 @@ NavMeshAgent:
     type: 3}
   m_PrefabInstance: {fileID: 1246199379}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &409977924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 409977925}
+  m_Layer: 0
+  m_Name: Flags
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &409977925
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409977924}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.70154, y: 0.7141557, z: 8.089865}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1295816430}
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &436039023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10179,6 +10217,8 @@ MonoBehaviour:
   newPosition: {fileID: 0}
   haveTrail: 0
   trailTarget: {fileID: 0}
+  setFlagTrue: 0
+  flag: {fileID: 0}
   onBlinkFinished:
     m_PersistentCalls:
       m_Calls: []
@@ -16184,6 +16224,8 @@ MonoBehaviour:
   newPosition: {fileID: 0}
   haveTrail: 1
   trailTarget: {fileID: 1852744703}
+  setFlagTrue: 0
+  flag: {fileID: 0}
   onBlinkFinished:
     m_PersistentCalls:
       m_Calls: []
@@ -16522,6 +16564,8 @@ MonoBehaviour:
   newPosition: {fileID: 0}
   haveTrail: 0
   trailTarget: {fileID: 0}
+  setFlagTrue: 0
+  flag: {fileID: 0}
   onBlinkFinished:
     m_PersistentCalls:
       m_Calls: []
@@ -23674,6 +23718,8 @@ MonoBehaviour:
   newPosition: {fileID: 0}
   haveTrail: 0
   trailTarget: {fileID: 0}
+  setFlagTrue: 0
+  flag: {fileID: 0}
   onBlinkFinished:
     m_PersistentCalls:
       m_Calls: []
@@ -23795,6 +23841,8 @@ MonoBehaviour:
   newPosition: {fileID: 0}
   haveTrail: 0
   trailTarget: {fileID: 0}
+  setFlagTrue: 0
+  flag: {fileID: 0}
   onBlinkFinished:
     m_PersistentCalls:
       m_Calls: []
@@ -24024,6 +24072,8 @@ MonoBehaviour:
   newPosition: {fileID: 0}
   haveTrail: 1
   trailTarget: {fileID: 1031841821}
+  setFlagTrue: 0
+  flag: {fileID: 0}
   onBlinkFinished:
     m_PersistentCalls:
       m_Calls: []
@@ -29185,6 +29235,51 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &1295816429
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1295816430}
+  - component: {fileID: 1295816431}
+  m_Layer: 0
+  m_Name: Runaway
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1295816430
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295816429}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 409977925}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1295816431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295816429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ba1a1d1e557a40874017716f34dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flagStatus: 0
 --- !u!1001 &1339227579
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35816,6 +35911,8 @@ MonoBehaviour:
   newPosition: {fileID: 0}
   haveTrail: 0
   trailTarget: {fileID: 0}
+  setFlagTrue: 0
+  flag: {fileID: 0}
   onBlinkFinished:
     m_PersistentCalls:
       m_Calls: []
@@ -37295,7 +37392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1828754441}
   - component: {fileID: 1828754443}
-  - component: {fileID: 1828754442}
+  - component: {fileID: 1828754445}
   - component: {fileID: 1828754444}
   m_Layer: 0
   m_Name: BLINK Final
@@ -37323,32 +37420,6 @@ Transform:
   m_Father: {fileID: 1565040310}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1828754442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1828754440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f1f90119dfb667468b2d0c586a6410a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggered: 0
-  buttonToAdvance:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Button To Advance
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: b3d89262-39de-4ab2-9e6e-15e1f0ce6072
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: -8985199710864664118, guid: c348712bda248c246b8c49b3db54643f,
-      type: 3}
 --- !u!114 &1828754443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37364,16 +37435,18 @@ MonoBehaviour:
   triggerUsage: 
   isTimeTrigger: 0
   timeInSec: 0
-  isObjectTrigger: 0
+  isObjectTrigger: 1
   toObserve: {fileID: 1828754440}
   isButtonTrigger: 0
-  blinkDelay: 0
+  blinkDelay: 10
   blinkDuration: 0
   nextBlink: {fileID: 0}
   movePlayer: 0
   newPosition: {fileID: 0}
   haveTrail: 0
   trailTarget: {fileID: 0}
+  setFlagTrue: 0
+  flag: {fileID: 0}
   onBlinkFinished:
     m_PersistentCalls:
       m_Calls: []
@@ -37396,6 +37469,19 @@ MonoBehaviour:
     - Name: BullyKilled
       Value: 1
   TriggerEvent: 11
+--- !u!114 &1828754445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828754440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35385c48d48af53489ed5b46999fd22a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggered: 0
 --- !u!1001 &1846855058
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39966,6 +40052,8 @@ MonoBehaviour:
   newPosition: {fileID: 0}
   haveTrail: 1
   trailTarget: {fileID: 539635347}
+  setFlagTrue: 0
+  flag: {fileID: 0}
   onBlinkFinished:
     m_PersistentCalls:
       m_Calls: []
