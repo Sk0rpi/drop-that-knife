@@ -6,11 +6,6 @@ public class Flagtag : MonoBehaviour
 {
     public bool flagStatus = false;
     
-    void Awake()
-    {
-        DontDestroyOnLoad(this.gameObject);
-    }
-
     public void Switch_Flag_Status()
     {
         flagStatus = !flagStatus;

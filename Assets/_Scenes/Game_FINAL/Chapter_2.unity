@@ -3783,6 +3783,8 @@ MonoBehaviour:
   newPosition: {fileID: 0}
   haveTrail: 1
   trailTarget: {fileID: 1089066180}
+  setFlagTrue: 0
+  flag: {fileID: 0}
   onBlinkFinished:
     m_PersistentCalls:
       m_Calls: []
@@ -5200,37 +5202,37 @@ PrefabInstance:
     - target: {fileID: 7035998645546110251, guid: ad692e45ab80ec341b9ae3e20d11cac7,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9082527
+      value: 0.9166656
       objectReference: {fileID: 0}
     - target: {fileID: 7035998645546110251, guid: ad692e45ab80ec341b9ae3e20d11cac7,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.1341437
+      value: -0.047400407
       objectReference: {fileID: 0}
     - target: {fileID: 7035998645546110251, guid: ad692e45ab80ec341b9ae3e20d11cac7,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.3534916
+      value: 0.36566025
       objectReference: {fileID: 0}
     - target: {fileID: 7035998645546110251, guid: ad692e45ab80ec341b9ae3e20d11cac7,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.17923802
+      value: -0.15417503
       objectReference: {fileID: 0}
     - target: {fileID: 7035998645546110251, guid: ad692e45ab80ec341b9ae3e20d11cac7,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 6.716
+      value: 1.481
       objectReference: {fileID: 0}
     - target: {fileID: 7035998645546110251, guid: ad692e45ab80ec341b9ae3e20d11cac7,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 44.025
+      value: 43.253
       objectReference: {fileID: 0}
     - target: {fileID: 7035998645546110251, guid: ad692e45ab80ec341b9ae3e20d11cac7,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 25.045
+      value: -18.507
       objectReference: {fileID: 0}
     - target: {fileID: 7035998645546110253, guid: ad692e45ab80ec341b9ae3e20d11cac7,
         type: 3}
@@ -10638,6 +10640,8 @@ MonoBehaviour:
   newPosition: {fileID: 0}
   haveTrail: 1
   trailTarget: {fileID: 994362834}
+  setFlagTrue: 0
+  flag: {fileID: 0}
   onBlinkFinished:
     m_PersistentCalls:
       m_Calls: []
@@ -21366,6 +21370,8 @@ MonoBehaviour:
   newPosition: {fileID: 1697906629}
   haveTrail: 1
   trailTarget: {fileID: 3384873490117479229}
+  setFlagTrue: 0
+  flag: {fileID: 0}
   onBlinkFinished:
     m_PersistentCalls:
       m_Calls: []
