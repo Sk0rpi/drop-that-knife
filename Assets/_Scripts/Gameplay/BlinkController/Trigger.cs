@@ -21,12 +21,7 @@ public class Trigger : MonoBehaviour
     public float blinkDelay;
     public float blinkDuration;
     public Transform trailTarget;
-
-    public Flagtag flag;
-    public bool setFlagTrue;
-
     public UnityEvent onBlinkFinished;
-
     public bool Check_Trigger()
     {
         for (int i = 0; i < _triggerCases.Count; i++)
@@ -95,28 +90,6 @@ public class Trigger : MonoBehaviour
         else
         {
             trailTarget = null;
-        }
-
-        if (triggerConnector.setFlagTrue)
-        {
-            
-            if (triggerConnector.flag != null)
-            {
-                if (triggerConnector.flag.GetComponents(typeof(TriggerConnector)) != null)
-                {
-                    flag = triggerConnector.flag.GetComponent(typeof(Flagtag)) as Flagtag;
-                }
-                else
-                {
-                    Debug.LogError("NO COMPATIBLE FLAG FOUND!");  
-                }
-                setFlagTrue = true;
-            }
-
-            else
-            {
-                Debug.LogError("NO FLAG FOUND!");   
-            }
         }
 
         bool triggerActive = false;
