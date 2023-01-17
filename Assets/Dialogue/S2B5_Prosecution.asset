@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 754e9f7a79394f348b3fb9edc8dced58, type: 3}
-  m_Name: S2B2_Lawyer
+  m_Name: S2B5_Prosecution
   m_EditorClassIdentifier: 
-  text_eng: Sit here, please
-  text_nl: Sit here, please (NL)
-  shadowColor: {r: 0.25490198, g: 0.23529413, b: 0.40000004, a: 1}
+  text_eng: Yesterday at 5 in the afternoon, the accused stabbed my client in an
+    abandoned factory
+  text_nl: Yesterday at 5 in the afternoon, the accused stabbed my client in an abandoned
+    factory(NL)
+  shadowColor: {r: 0.32941177, g: 0.05882353, b: 0, a: 1}

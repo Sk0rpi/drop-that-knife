@@ -2,6 +2,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Rendering;
 using FMOD;
+using UnityEngine.XR.Interaction.Toolkit;
 public class KillingBully : MonoBehaviour
 {
     [SerializeField]
@@ -15,7 +16,12 @@ public class KillingBully : MonoBehaviour
     [SerializeField]
     FMODUnity.StudioParameterTrigger stabParameterTrigger;
 
+    [SerializeField]
+    Haptic hapticOnBullyKilled;
+
     bool dead;
+
+    public int numberOfStabs = 0;
 
     public void ChangeDeathVolume()
     {
@@ -36,6 +42,10 @@ public class KillingBully : MonoBehaviour
             animator.SetTrigger("Death");
             DOVirtual.Float(1, 0.5f, 2f, ChangeTimeScale);
 
+            // Search for controller in knife hand
+            XRBaseController controller = collision.collider.GetComponent<XRBaseInteractable>().firstInteractorSelecting.transform.gameObject.GetComponent<XRBaseController>();
+            hapticOnBullyKilled.TriggerHaptic(controller);
+
             stabParameterTrigger.TriggerParameters();
 
             // Particles
@@ -45,6 +55,10 @@ public class KillingBully : MonoBehaviour
             bloodParticles.Play();
 
             Invoke("ChangeScene", 5f);
+        }
+        else if(dead)
+        {
+            numberOfStabs++;
         }
     }
 

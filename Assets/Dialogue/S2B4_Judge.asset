@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 754e9f7a79394f348b3fb9edc8dced58, type: 3}
-  m_Name: S2B2_Lawyer
+  m_Name: S2B4_Judge
   m_EditorClassIdentifier: 
-  text_eng: Sit here, please
-  text_nl: Sit here, please (NL)
-  shadowColor: {r: 0.25490198, g: 0.23529413, b: 0.40000004, a: 1}
+  text_eng: Please remain silent. We will start the trial
+  text_nl: Please remain silent. We will start the trial(NL)
+  shadowColor: {r: 0.08627451, g: 0.098039225, b: 0.1137255, a: 1}

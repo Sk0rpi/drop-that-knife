@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 754e9f7a79394f348b3fb9edc8dced58, type: 3}
-  m_Name: S2B2_Lawyer
+  m_Name: S2B1_Mom
   m_EditorClassIdentifier: 
-  text_eng: Sit here, please
-  text_nl: Sit here, please (NL)
-  shadowColor: {r: 0.25490198, g: 0.23529413, b: 0.40000004, a: 1}
+  text_eng: My son is the only thing I have left...
+  text_nl: My son is the only thing I have left... (NL)
+  shadowColor: {r: 0.9058824, g: 0.18431373, b: 0.24313727, a: 1}
