@@ -43,6 +43,10 @@ public class TriggerConnector : MonoBehaviour
     public bool haveTrail = false;
     public Transform trailTarget;
 
+    [Space] [Header("Flags")]
+    public bool setFlagTrue;
+    public GameObject flag;
+
     [Space]
     [Header("Events on finish")]
     public UnityEvent onBlinkFinished;

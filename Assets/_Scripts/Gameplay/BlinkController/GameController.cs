@@ -75,7 +75,7 @@ public class GameController : MonoBehaviour
                 Trigger trigger = newBlink.AddComponent<Trigger>();
                 trigger.debug_Timer = debug_Timer;
                 trigger.triggerConnector = triggerConnector;
-                
+
                 trigger.Arm_Trigger();
 
                 trailTarget = trigger.trailTarget;
@@ -134,6 +134,9 @@ public class GameController : MonoBehaviour
         _activeTrigger.onBlinkFinished.Invoke();
 
         Debug.Log("Changing Blink...");
+        
+        Check_Flag_Set(_activeTrigger);
+        nextBlink = Check_Flag_Decision(nextBlink);
 
         // Wait for a delay we can set up in each triggerConnector
         yield return new WaitForSecondsRealtime(trigger.blinkDelay);
@@ -180,4 +183,27 @@ public class GameController : MonoBehaviour
         Set_Debug_Blink();
     }
 
+    public void Check_Flag_Set(Trigger trigger)
+    {
+        if (trigger.setFlagTrue)
+        {
+            Flagtag flag = trigger.flag;
+            flag.Switch_Flag_Status();
+        }
+    }
+
+    public GameObject Check_Flag_Decision(GameObject nextBlink)
+    {
+        if (nextBlink.GetComponent(typeof(FlagDecider)) != null)
+        {
+            FlagDecider flagDecider = nextBlink.GetComponent(typeof(FlagDecider)) as FlagDecider;
+            if (flagDecider.flag.flagStatus)
+            {
+                return flagDecider.trueWay;
+            }
+            return flagDecider.falseWay;
+        }
+
+        return nextBlink;
+    }
 }
