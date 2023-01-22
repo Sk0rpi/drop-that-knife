@@ -13,9 +13,22 @@ public class FlagsManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else
+        else if (this != instance)
         {
-            Destroy(gameObject);
+            UpdateCurrentSceneFlags();
+            Destroy(instance);
+            instance = this;
+        }
+    }
+
+    private void UpdateCurrentSceneFlags()
+    {
+        Flagtag[] currentFlagTags = GetComponentsInChildren<Flagtag>(true);
+        Flagtag[] previousFlagTags = instance.GetComponentsInChildren<Flagtag>(true);
+
+        for(int i = 0; i < currentFlagTags.Length; i++)
+        {
+            currentFlagTags[i].flagStatus = previousFlagTags[i].flagStatus;
         }
     }
 
