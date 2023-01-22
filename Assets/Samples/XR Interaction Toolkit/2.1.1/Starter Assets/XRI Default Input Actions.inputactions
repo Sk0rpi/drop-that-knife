@@ -137,6 +137,50 @@
                 },
                 {
                     "name": "Vector 3 Fallback",
+                    "id": "932decfa-295c-4dc3-bfd1-3e6e6bda9a99",
+                    "path": "Vector3Fallback",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Position",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "first",
+                    "id": "2fca6e2c-db3f-48a0-9fa8-60d82038ee48",
+                    "path": "<OculusTouchController>{LeftHand}/pointerPosition",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Position",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "second",
+                    "id": "8c74d72f-7f30-4800-af2a-43ee29c560d4",
+                    "path": "<OculusTouchController>{LeftHand}/devicePosition",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Position",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "third",
+                    "id": "85c8b7c1-a6bd-4c81-bc6d-ff7f32db65e7",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Position",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Vector 3 Fallback",
                     "id": "14aeff85-d719-43ff-a124-b1cd7ca8686d",
                     "path": "Vector3Fallback",
                     "interactions": "",
@@ -180,48 +224,15 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "Vector 3 Fallback",
-                    "id": "932decfa-295c-4dc3-bfd1-3e6e6bda9a99",
-                    "path": "Vector3Fallback",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Position",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "first",
-                    "id": "2fca6e2c-db3f-48a0-9fa8-60d82038ee48",
-                    "path": "<OculusTouchController>{LeftHand}/pointerPosition",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Position",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "second",
-                    "id": "8c74d72f-7f30-4800-af2a-43ee29c560d4",
+                    "name": "",
+                    "id": "3163ac35-bb75-47a2-af64-933b8fc4b42b",
                     "path": "<OculusTouchController>{LeftHand}/devicePosition",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Position",
                     "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "third",
-                    "id": "85c8b7c1-a6bd-4c81-bc6d-ff7f32db65e7",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Position",
-                    "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 },
                 {
                     "name": "",
