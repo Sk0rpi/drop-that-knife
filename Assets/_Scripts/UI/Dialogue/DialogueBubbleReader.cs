@@ -19,11 +19,11 @@ public class DialogueBubbleReader : MonoBehaviour
         UpdateBubble();
     }
 
-    private void OnValidate()
+    /*private void OnValidate()
     {
         // In editor update the bubble as needed
         UpdateBubble();
-    }
+    }*/
 
     private void UpdateBubble()
     {
