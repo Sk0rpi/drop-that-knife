@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 754e9f7a79394f348b3fb9edc8dced58, type: 3}
-  m_Name: S2B5.1_Prosecution
+  m_Name: S2B5.2_Prosecution
   m_EditorClassIdentifier: 
-  text_eng: Not only that, but the defendant also ran away...
-  text_nl: Not only that, but the accused also ran away... (NL)
+  text_eng: This caused severe injuries and almost death
+  text_nl: This caused severe injuries and almost death(NL)
   shadowColor: {r: 0.32941177, g: 0.05882353, b: 0, a: 1}

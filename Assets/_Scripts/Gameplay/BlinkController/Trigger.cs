@@ -42,7 +42,6 @@ public class Trigger : MonoBehaviour
                 {
                     // If so, update the timer
                     _timer.Update_Timer();
-                    Set_Debug_Timer();
                 }
 
                 // If the timer is done
@@ -160,12 +159,6 @@ public class Trigger : MonoBehaviour
     {
         _timer = gameObject.AddComponent<Timer>();
         _timer.Set_Timer(timeInSec);
-        Set_Debug_Timer();
-    }
-
-    private void Set_Debug_Timer()
-    {
-        debug_Timer.text = "Timer: " + Mathf.Floor(_timer.Get_TimeRemaining());
     }
     
     private void Set_GameObject_Trigger(GameObject gameObject)

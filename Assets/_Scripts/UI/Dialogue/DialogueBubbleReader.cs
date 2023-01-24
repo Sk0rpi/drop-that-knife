@@ -29,7 +29,7 @@ public class DialogueBubbleReader : MonoBehaviour
     {
         if (bubbleText != null)
         {
-            text.text = bubbleText.text_nl;
+            LocalizeTextBubble(LocalizationSettings.SelectedLocale);
             shadow.color = bubbleText.shadowColor;
 
             LocalizationSettings.SelectedLocaleChanged += LocalizeTextBubble;

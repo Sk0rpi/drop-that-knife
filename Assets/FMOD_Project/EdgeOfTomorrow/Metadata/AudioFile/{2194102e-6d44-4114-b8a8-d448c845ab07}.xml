@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{2194102e-6d44-4114-b8a8-d448c845ab07}">
+		<property name="assetPath">
+			<value>SoundAssets/Scene2/JudgeHammer_3times.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.0767346938775511</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{c2f6f9b0-29fe-48ab-a540-19906f3e4f9b}</destination>
+		</relationship>
+	</object>
+</objects>

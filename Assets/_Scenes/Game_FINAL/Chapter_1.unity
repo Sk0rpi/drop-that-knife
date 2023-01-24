@@ -16546,7 +16546,7 @@ MonoBehaviour:
   isButtonTrigger: 0
   blinkDelay: 0
   blinkDuration: 0
-  nextBlink: {fileID: 1866933140}
+  nextBlink: {fileID: 674313266}
   movePlayer: 0
   newPosition: {fileID: 0}
   haveTrail: 0
@@ -35694,9 +35694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 525681f6c2b6cb44784c92b38552177e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1469999674}
-  debug_Blink: {fileID: 942945503}
-  debug_Timer: {fileID: 954159110}
+  animatorUI: {fileID: 1469999674}
   activeBlink: {fileID: 521451334}
   onBlinkPerformed:
     m_PersistentCalls:

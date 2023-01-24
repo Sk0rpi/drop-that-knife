@@ -10,9 +10,7 @@ using UnityEngine.AI;
 public class GameController : MonoBehaviour
 {
     
-    public Animator animator; // Blink UI Animator
-    public TMP_Text debug_Blink;
-    public TMP_Text debug_Timer;
+    public Animator animatorUI; // Blink UI Animator
 
     [Space]
     [Header("Starting Blink / Active Blink")]
@@ -47,8 +45,6 @@ public class GameController : MonoBehaviour
         // Activate the first blink and arm the trigger
         activeBlink.SetActive(true);
         Arm_Triggers(activeBlink);
-        
-        Set_Debug_Blink();
 
         player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -73,7 +69,6 @@ public class GameController : MonoBehaviour
             foreach (TriggerConnector triggerConnector in triggerConnectors)
             {
                 Trigger trigger = newBlink.AddComponent<Trigger>();
-                trigger.debug_Timer = debug_Timer;
                 trigger.triggerConnector = triggerConnector;
 
                 trigger.Arm_Trigger();
@@ -117,12 +112,6 @@ public class GameController : MonoBehaviour
         
     }
 
-    private void Set_Debug_Blink()
-    {
-        debug_Blink.text = "Blink: " + (activeBlink.name);
-    }
-
-
     /// <summary>
     /// Trigger_Blink_Change deactivates the current blink, activates the next one and triggers a blink animation
     /// </summary>
@@ -141,7 +130,7 @@ public class GameController : MonoBehaviour
         // Wait for a delay we can set up in each triggerConnector
         yield return new WaitForSecondsRealtime(trigger.blinkDelay);
 
-        animator.SetTrigger("Fade_out");
+        animatorUI.SetTrigger("Fade_out");
 
         // Wait for a delay so everything shows up properly
         yield return new WaitForSecondsRealtime(1f);
@@ -172,15 +161,13 @@ public class GameController : MonoBehaviour
         yield return new WaitForSecondsRealtime(trigger.blinkDuration);
 
         // Trigger Blink-Animation Fade_in
-        animator.SetTrigger("Fade_in");
+        animatorUI.SetTrigger("Fade_in");
 
         // Callbacks for blinks
         onBlinkPerformed.Invoke();   
         
         // Call the trigger arming with the new blink object
         Arm_Triggers(activeBlink);
-
-        Set_Debug_Blink();
     }
 
     public void Check_Flag_Set(Trigger trigger)

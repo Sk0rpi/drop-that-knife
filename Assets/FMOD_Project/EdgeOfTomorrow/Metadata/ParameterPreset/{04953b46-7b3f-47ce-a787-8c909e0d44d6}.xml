@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{04953b46-7b3f-47ce-a787-8c909e0d44d6}">
+		<property name="name">
+			<value>StopCrowd</value>
+		</property>
+		<relationship name="folder">
+			<destination>{a1b8102e-ed15-463a-bf6d-7ccc63a2386c}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{a6a5791e-163d-4fa7-96c7-6f8b6cd119ee}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{a6a5791e-163d-4fa7-96c7-6f8b6cd119ee}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
