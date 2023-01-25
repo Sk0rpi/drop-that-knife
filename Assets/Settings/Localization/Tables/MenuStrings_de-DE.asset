@@ -19,15 +19,15 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 27800801280
-    m_Localized: Play
+    m_Localized: Spielen
     m_Metadata:
       m_Items: []
   - m_Id: 2324681363456
-    m_Localized: Settings
+    m_Localized: Einstellungen
     m_Metadata:
       m_Items: []
   - m_Id: 2369786908672
-    m_Localized: Quit
+    m_Localized: Beenden
     m_Metadata:
       m_Items: []
   - m_Id: 3882743664640
@@ -35,7 +35,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4039417696256
-    m_Localized: Movement type
+    m_Localized: Bewegungsart
     m_Metadata:
       m_Items: []
   - m_Id: 4143113474048
@@ -43,11 +43,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4411209191424
-    m_Localized: Back
+    m_Localized: "Zur\xFCck"
     m_Metadata:
       m_Items: []
   - m_Id: 3918366075949056
     m_Localized: "Was h\xE4ttest du anders gemacht?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3951980864462848
+    m_Localized: Sprache
     m_Metadata:
       m_Items: []
   references:

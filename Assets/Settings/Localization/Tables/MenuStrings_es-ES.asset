@@ -50,6 +50,10 @@ MonoBehaviour:
     m_Localized: "\xBFQu\xE9 habr\xEDas hecho?"
     m_Metadata:
       m_Items: []
+  - m_Id: 3951980864462848
+    m_Localized: Idioma
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

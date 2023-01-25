@@ -47,6 +47,10 @@ MonoBehaviour:
     m_Key: LastText
     m_Metadata:
       m_Items: []
+  - m_Id: 3951980864462848
+    m_Key: Language
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
