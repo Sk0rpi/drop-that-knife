@@ -1941,7 +1941,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &2815073320751584726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3197,7 +3197,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: What would have you done...?
+  m_text: What would you have done...?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0914075269120694e8d0fb7692687ea4, type: 2}
   m_sharedMaterial: {fileID: -6448964355784889656, guid: 0914075269120694e8d0fb7692687ea4,

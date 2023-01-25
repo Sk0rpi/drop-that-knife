@@ -19,31 +19,31 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 27800801280
-    m_Localized: Play(NL)
+    m_Localized: Play
     m_Metadata:
       m_Items: []
   - m_Id: 2324681363456
-    m_Localized: Settings(NL)
+    m_Localized: Instellingen
     m_Metadata:
       m_Items: []
   - m_Id: 2369786908672
-    m_Localized: Quit(NL)
+    m_Localized: Afsluiten
     m_Metadata:
       m_Items: []
   - m_Id: 3882743664640
-    m_Localized: Turn type (NL)
+    m_Localized: Turn type
     m_Metadata:
       m_Items: []
   - m_Id: 4039417696256
-    m_Localized: Movement type (NL)
+    m_Localized: Movement type
     m_Metadata:
       m_Items: []
   - m_Id: 4143113474048
-    m_Localized: Sound (NL)
+    m_Localized: Sound
     m_Metadata:
       m_Items: []
   - m_Id: 4411209191424
-    m_Localized: Back (NL)
+    m_Localized: Terug
     m_Metadata:
       m_Items: []
   references:
