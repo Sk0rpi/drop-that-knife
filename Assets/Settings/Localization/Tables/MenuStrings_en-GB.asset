@@ -46,6 +46,10 @@ MonoBehaviour:
     m_Localized: Back
     m_Metadata:
       m_Items: []
+  - m_Id: 3918366075949056
+    m_Localized: What would you have done?
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
