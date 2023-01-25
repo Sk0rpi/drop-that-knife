@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 754e9f7a79394f348b3fb9edc8dced58, type: 3}
   m_Name: S1B11
   m_EditorClassIdentifier: 
-  text_eng: Jij ook, ik sla jou helemaal in elkaar man!
+  text_eng: "You want some too, fucker?\r"
   text_nl: Jij ook, ik sla jou helemaal in elkaar man!
   text_ger: Willst du auch auf's Maul?
   text_esp: "T\xFA tambi\xE9n quieres, \xBFtonto?"
