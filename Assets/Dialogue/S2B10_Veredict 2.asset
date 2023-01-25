@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text_eng: I sentence the accused, due to his unauthorized departure from the scene
     of an accident, for 36 months juvenile detention.
-  text_nl: Ik veroordeel de verdachte tot 36 maanden gevangenisstraf voor het zonder
-    toestemming verlaten van de plaats van het ongeval.
+  text_nl: Ik veroordeel de verdachte tot 36 maanden gevangenisstraf voor het  verlaten
+    van de plaats van het ongeval.
   text_ger: Ich verurteile den Angeklagten, in Beachtung des unerlaubten Verlassens
     des Unfallortes, zu 36 Monaten Jugendhaft.
   text_esp: "La sentencia es de 36 meses en un centro de detenci\xF3n juvenil. 12

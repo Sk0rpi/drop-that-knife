@@ -15,9 +15,8 @@ MonoBehaviour:
   text_eng: The police also mentioned that the accused was not at the crime scene
     anymore. This is an offense called "Unauthorized departure from the scene of
     an accident".
-  text_nl: De politie heeft aangegeven dat de verdachte nit meer op de plaats delict
-    aanwezig was. Dit is ook een overtreding genaamd "Ongeautoriseerd vertrek van
-    de plaats van een ongeval".
+  text_nl: De politie heeft aangegeven dat de verdachte niet meer op de plaats delict
+    aanwezig was. Dit is ook een overtreding.
   text_ger: "Die Polizei und andere Rettungskr\xE4fte erw\xE4hnten, dass der Angeklagte
     bereits vom Tatort verschwunden war. Dies gilt als Straftat und f\xE4llt unter
     \"Unerlaubten Verlassen eines Unfallortes\"."
