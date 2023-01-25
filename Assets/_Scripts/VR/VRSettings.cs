@@ -10,7 +10,7 @@ public class VRSettings : MonoBehaviour
 
     [SerializeField] TeleportationProvider teleportationProvider;
     [SerializeField] ActivateTeleportationRay activateTeleportationRay;
-    [SerializeField] GameObject teleportationRayObject;
+    [SerializeField] GameObject[] teleportationRayObjects;
 
     [Header("Turn")]
     [SerializeField] ContinuousTurnProviderBase continuousTurnProvider;
@@ -26,12 +26,20 @@ public class VRSettings : MonoBehaviour
         ActivateMovement();
     }
 
+    private void SetAllRaysActive(bool activate)
+    {
+        foreach(GameObject ray in teleportationRayObjects)
+        {
+            ray.SetActive(activate);
+        }
+    }
+
     void SetContinuousMove()
     {
         Debug.Log("Set ContinuousMove");
         teleportationProvider.enabled = false;
         activateTeleportationRay.enabled = false;
-        teleportationRayObject.SetActive(false);
+        SetAllRaysActive(false);
 
         continuousMoveProvider.enabled = true;
 
@@ -45,7 +53,7 @@ public class VRSettings : MonoBehaviour
 
         teleportationProvider.enabled = true;
         activateTeleportationRay.enabled = true;
-        teleportationRayObject.SetActive(true);
+        SetAllRaysActive(true);
 
         moveType = 0;
     }
@@ -99,7 +107,7 @@ public class VRSettings : MonoBehaviour
     {
         teleportationProvider.enabled = false;
         activateTeleportationRay.enabled = false;
-        teleportationRayObject.SetActive(false);
+        SetAllRaysActive(false);
 
         continuousMoveProvider.enabled = false;
     }

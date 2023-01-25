@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: S2B3_Lawyer
   m_EditorClassIdentifier: 
   text_eng: We're ready your Honor.
-  text_nl: We're ready your Honor (NL)
-  text_ger: 
-  text_esp: "Estamos preparados, se\xF1or\xEDa."
+  text_nl: Wij zitten er klaar voor, edelachtbare.
+  text_ger: Wir werden das hinkriegen.
+  text_esp: "Estamos preparados, su se\xF1or\xEDa."
   shadowColor: {r: 0.25490198, g: 0.23529413, b: 0.40000004, a: 1}

@@ -3771,7 +3771,7 @@ PrefabInstance:
     - target: {fileID: 3337526533084420062, guid: c121836b9b86ecc4aa116e418343d6d7,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5253101489849230679, guid: c121836b9b86ecc4aa116e418343d6d7,
         type: 3}
@@ -16140,6 +16140,19 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -8061240218431744966, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
+  leftTeleportationRay: {fileID: 0}
+  leftActivate:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
 --- !u!195 &625805819
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -19133,7 +19146,7 @@ PrefabInstance:
     - target: {fileID: 8943868395483623304, guid: 41aac2fd53d91004b83b4e3bd2435ee9,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41aac2fd53d91004b83b4e3bd2435ee9, type: 3}
