@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 754e9f7a79394f348b3fb9edc8dced58, type: 3}
   m_Name: S2B5_Prosecution
   m_EditorClassIdentifier: 
-  text_eng: Yesterday at 5 in the afternoon, the defendant stabbed my client in an
-    abandoned factory
-  text_nl: Yesterday at 5 in the afternoon, the accused stabbed my client in an abandoned
-    factory(NL)
+  text_eng: Yesterday at 5 in the afternoon the accused stabbed my client in an abandoned
+    factory.
+  text_nl: Gisteren om 5 uur s'middags, stak de verdachte mijn client neer in een
+    verlaten pand.
+  text_ger: "Gester, um 17 Uhr, wurde mein Client vom Angeklagten mit einer Stichwaffe
+    verletzt.\t"
+  text_esp: "Ayer a las 5 de la tarde el acusado hiri\xF3 gravemente a mi cliente
+    en una f\xE1brica abandonada."
   shadowColor: {r: 0.32941177, g: 0.05882353, b: 0, a: 1}

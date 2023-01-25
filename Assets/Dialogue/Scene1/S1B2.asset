@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 754e9f7a79394f348b3fb9edc8dced58, type: 3}
   m_Name: S1B2
   m_EditorClassIdentifier: 
-  text_eng: Come, take the knife
-  text_nl: Come, grab it, it's gonna be fun! (NL)
+  text_eng: I got a new knife. Come on and try it out!
+  text_nl: Ik heb net een nieuwe mes, laten we het uitesten.
+  text_ger: Ich habe ein neues Messer. Probiere es aus!
+  text_esp: "Tengo un cuchillo to' guapo, pru\xE9balo."
   shadowColor: {r: 0.14117648, g: 0.49411768, b: 0.17254902, a: 1}

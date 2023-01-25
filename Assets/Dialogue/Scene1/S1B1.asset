@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 754e9f7a79394f348b3fb9edc8dced58, type: 3}
   m_Name: S1B1
   m_EditorClassIdentifier: 
-  text_eng: Hey bro check this out
-  text_nl: Hey bro check this out. (NL)
+  text_eng: Hey bro check this out.
+  text_nl: Jo, moet je dit zien!
+  text_ger: Yo, schau dir das mal an.
+  text_esp: "Ey t\xEDo, prueba esto."
   shadowColor: {r: 0.14117648, g: 0.49411768, b: 0.17254902, a: 1}

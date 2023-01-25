@@ -19,11 +19,11 @@ public class DialogueBubbleReader : MonoBehaviour
         UpdateBubble();
     }
 
-    /*private void OnValidate()
+    private void OnValidate()
     {
         // In editor update the bubble as needed
         UpdateBubble();
-    }*/
+    }
 
     private void UpdateBubble()
     {
@@ -46,7 +46,11 @@ public class DialogueBubbleReader : MonoBehaviour
 
         if (locale.Identifier.Code == "en-GB")
             text.text = bubbleText.text_eng;
-        else
+        else if(locale.Identifier.Code == "nl-NL")
             text.text = bubbleText.text_nl;
+        else if(locale.Identifier.Code == "de-DE")
+            text.text = bubbleText.text_ger;
+        else if(locale.Identifier.Code == "es-ES")
+            text.text = bubbleText.text_esp;
     }
 }

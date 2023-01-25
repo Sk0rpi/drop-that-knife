@@ -14,6 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text_eng: Now that we have all information, and taking into account that the defendant
     was carrying a knife with them...
-  text_nl: Now that we have all information, and taking into account that the defendant
-    was carrying a knife with them...(NL)
+  text_nl: Nu we alle informatie hebben verzameld, zal ik het vonnis bekendmaken
+    en het gebruik van het mes overwegen.
+  text_ger: "Da wir nun alle Informationen zusammengetragen haben, werde ich das
+    Urteil verk\xFCnden und den Einsatz des Messer ber\xFCcksichtigen..."
+  text_esp: "Ahora que tenemos toda la informaci\xF3n y teniendo en cuenta que el
+    defensor llevaba un cuchillo..."
   shadowColor: {r: 0.08627451, g: 0.098039225, b: 0.1137255, a: 1}

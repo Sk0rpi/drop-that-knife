@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 754e9f7a79394f348b3fb9edc8dced58, type: 3}
   m_Name: S2B10_Veredict 2
   m_EditorClassIdentifier: 
-  text_eng: 'The accused is sentenced to stay at a juvenile detention center for
-    3 years
-
-'
-  text_nl: The accused is sentenced to stay at a juvenile detention center for 3
-    years(NL)
+  text_eng: I sentence the accused, due to his unauthorized departure from the scene
+    of an accident, for 36 months juvenile detention.
+  text_nl: Ik veroordeel de verdachte tot 36 maanden gevangenisstraf voor het zonder
+    toestemming verlaten van de plaats van het ongeval.
+  text_ger: Ich verurteile den Angeklagten, in Beachtung des unerlaubten Verlassens
+    des Unfallortes, zu 36 Monaten Jugendhaft.
+  text_esp: "La sentencia es de 36 meses en un centro de detenci\xF3n juvenil. 12
+    meses por el crimen y 24 por huir de la escena."
   shadowColor: {r: 0.08627451, g: 0.098039225, b: 0.1137255, a: 1}

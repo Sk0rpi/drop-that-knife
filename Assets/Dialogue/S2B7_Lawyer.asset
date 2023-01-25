@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: S2B7_Lawyer
   m_EditorClassIdentifier: 
   text_eng: While my client and his friend were spending time in an abandoned factory,
-    they were threatened by the accuser
-  text_nl: While my client and his friend were spending time in an abandoned factory,
-    they were threatened by the accuser (NL)
+    they were threatened by the accuser.
+  text_nl: "Toen mijn cli\xEBnt en zijn vriend rondhingen in een verlaten fabriek,
+    werden ze bedreigd door de aanklager."
+  text_ger: "W\xE4hrend mein Klient und dessen Freund in einer verlassenen Fabrik
+    ihre Zeit verbracht hatten, wurden Sie vom Kl\xE4ger bedroht."
+  text_esp: "Mientras mi cliente y su amigo estaban en una f\xE1brica abandonada,
+    fueron amenazados por el acusado."
   shadowColor: {r: 0.25490198, g: 0.23529413, b: 0.40000004, a: 1}

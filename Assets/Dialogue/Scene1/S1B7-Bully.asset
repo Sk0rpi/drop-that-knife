@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: S1B7-Bully
   m_EditorClassIdentifier: 
   text_eng: Hey rats, what are you doing in my territory?
-  text_nl: 
+  text_nl: Klootzak, wat doe jij hier in mijn gebied.
+  text_ger: Ey Spastis, was macht ihr in unserem Territorium?
+  text_esp: "Oye, pringaos, \xBFqu\xE9 hac\xE9is en mi territorio?"
   shadowColor: {r: 0.6039216, g: 0, b: 0.023529412, a: 1}

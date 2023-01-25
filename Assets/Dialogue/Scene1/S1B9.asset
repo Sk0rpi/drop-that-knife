@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: S1B9
   m_EditorClassIdentifier: 
   text_eng: I don't care... You scum!
-  text_nl: 
+  text_nl: Dat boeit mij niks, klootzak.
+  text_ger: Was interessiert mich das? Verpiss dich!
+  text_esp: "Qu\xE9 dices, \xA1subnormal!"
   shadowColor: {r: 0.6039216, g: 0, b: 0.023529412, a: 1}

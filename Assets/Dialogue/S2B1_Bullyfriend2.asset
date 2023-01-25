@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: S2B1_Bullyfriend2
   m_EditorClassIdentifier: 
   text_eng: You're in a big mess, dumbass!
-  text_nl: You're in a big mess, dumbass! (NL)
+  text_nl: Je heb het flink verpest!
+  text_ger: "Du bist richtig in der Schei\xDFe!"
+  text_esp: "\xA1Estas en un l\xEDo, idiota!"
   shadowColor: {r: 0.31764707, g: 0.20784315, b: 0.21176472, a: 1}

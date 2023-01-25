@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 754e9f7a79394f348b3fb9edc8dced58, type: 3}
   m_Name: S2B5.2_Prosecution
   m_EditorClassIdentifier: 
-  text_eng: This caused severe injuries and almost death
-  text_nl: This caused severe injuries and almost death(NL)
+  text_eng: The accused used a hunting knife with a blade length of 25 cm. Due to
+    the dutch weapon law wearing such a knife in public is illegal.
+  text_nl: De verdachte gebruikte een jagers mes met een lengte van 25cm. Het is
+    illegaal om dit soort messen in openbaar bij je te hebben.
+  text_ger: "Der Angeklagte besa\xDF ein Jagdmesser mit einer Klingenl\xE4nge von
+    25 cm. Aufgrund des niederl\xE4ndischen Waffengesetzes, ist das f\xFChren eines
+    solchen Messer in der \xD6ffentlichkeit illegal."
+  text_esp: "El acusado us\xF3 un cuchillo de caza de 25 cm. Debido a la legislatura
+    neerlandesa, llevar ese arma es ilegal."
   shadowColor: {r: 0.32941177, g: 0.05882353, b: 0, a: 1}

@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 754e9f7a79394f348b3fb9edc8dced58, type: 3}
   m_Name: S2B4_Judge
   m_EditorClassIdentifier: 
-  text_eng: Please remain silent. We will start the trial
-  text_nl: Please remain silent. We will start the trial(NL)
+  text_eng: Please remain silent. We will start the trial.
+  text_nl: Stilte astulbieft! De rechtzaak is nu gestart.
+  text_ger: Bitte bleiben Sie still. Wir starten nun mit Gerichtsverfahren!
+  text_esp: Por favor, mantenganse en silencio. Vamos a empezar el juicio.
   shadowColor: {r: 0.08627451, g: 0.098039225, b: 0.1137255, a: 1}

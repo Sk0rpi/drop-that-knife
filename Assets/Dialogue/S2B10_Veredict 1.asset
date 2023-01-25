@@ -12,10 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 754e9f7a79394f348b3fb9edc8dced58, type: 3}
   m_Name: S2B10_Veredict 1
   m_EditorClassIdentifier: 
-  text_eng: 'The accused is sentenced to stay at a juvenile detention center for
-    2 years
-
-'
-  text_nl: The accused is sentenced to stay at a juvenile detention center for 2
-    years(NL)
+  text_eng: I sentence the accused to 12 months juvenile detention.
+  text_nl: Ik veroordeel de verdachte tot 12 maanden jeugdgevangenis.
+  text_ger: Ich verurteile den Angeklagten zu 12 Monaten Jugendhaft.
+  text_esp: "La sentencia es de 12 meses en un centro de detenci\xF3n juvenil."
   shadowColor: {r: 0.08627451, g: 0.098039225, b: 0.1137255, a: 1}

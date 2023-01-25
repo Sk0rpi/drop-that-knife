@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 754e9f7a79394f348b3fb9edc8dced58, type: 3}
   m_Name: S2B1_Mom
   m_EditorClassIdentifier: 
-  text_eng: My son is the only thing I have left...
-  text_nl: My son is the only thing I have left... (NL)
+  text_eng: What have you done to my son!?
+  text_nl: Wat heb jij mijn zoon aangedaan!?
+  text_ger: Was hast du meinem Sohn angetan!?
+  text_esp: "\xBF\xA1Qu\xE9 le has hecho a mi hijo!?"
   shadowColor: {r: 0.9058824, g: 0.18431373, b: 0.24313727, a: 1}

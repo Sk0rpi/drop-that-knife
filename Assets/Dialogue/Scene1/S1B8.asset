@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 754e9f7a79394f348b3fb9edc8dced58, type: 3}
   m_Name: S1B8
   m_EditorClassIdentifier: 
-  text_eng: Man, we were here before you
-  text_nl: 
+  text_eng: Man, we were here before you...
+  text_nl: Gast, wij waren hier eerst ?!
+  text_ger: Alter, wir waren zuerst hier!
+  text_esp: "Va t\xEDo, est\xE1bamos aqu\xED antes que vosotros..."
   shadowColor: {r: 0.14117648, g: 0.49411768, b: 0.17254902, a: 1}

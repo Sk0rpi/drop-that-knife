@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 754e9f7a79394f348b3fb9edc8dced58, type: 3}
   m_Name: S2B6_Judge
   m_EditorClassIdentifier: 
-  text_eng: I see...Now, the defendant may tell their account of the events
-  text_nl: I see...Now, the defendant may tell their account of the events (NL)
+  text_eng: I see... Now, the defendant may tell their account of the events.
+  text_nl: Laten we nu verder gaan met de verdediging.
+  text_ger: "Lass uns nun mit der Verteidigung fortf\xFChren."
+  text_esp: Continuemos con la defensa.
   shadowColor: {r: 0.08627451, g: 0.098039225, b: 0.1137255, a: 1}

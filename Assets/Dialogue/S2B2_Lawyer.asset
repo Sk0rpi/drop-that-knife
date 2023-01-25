@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 754e9f7a79394f348b3fb9edc8dced58, type: 3}
   m_Name: S2B2_Lawyer
   m_EditorClassIdentifier: 
-  text_eng: Sit here, please
-  text_nl: Sit here, please (NL)
+  text_eng: Sit here, please.
+  text_nl: Ga alstublieft zitten.
+  text_ger: Bitte setzen Sie sich.
+  text_esp: "Por favor, si\xE9ntate."
   shadowColor: {r: 0.25490198, g: 0.23529413, b: 0.40000004, a: 1}

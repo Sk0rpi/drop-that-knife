@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 754e9f7a79394f348b3fb9edc8dced58, type: 3}
   m_Name: S2B8_Lawyer
   m_EditorClassIdentifier: 
-  text_eng: In self-defense, they used a knife they were carrying in an unadvatadged
-    position
-  text_nl: In self-defense, they used a knife they were carrying in an unadvatadged
-    position (NL)
+  text_eng: After verbal insults the situation escalated and the accuser physically
+    attacked my client and his friend. My client used the knife in selfdefence.
+  text_nl: "Na verbaal geweld escaleerde de situatie en viel de aanklager mijn cli\xEBnt
+    en zijn vriend aan. Mijn cli\xEBnt greep een mes uit zelfverdediging."
+  text_ger: "Nach verbalen Angriffen, eskalierte die Situation und der Kl\xE4ger
+    griff meinen Klienten und seinen Freund physikalisch an. Aus Notwehr griff mein
+    Klient zum Messer."
+  text_esp: "Despu\xE9s de insultos, la situaci\xF3n pas\xF3 a ser f\xEDsica, y atac\xF3
+    al amigo de mi cliente. El uso del cuchillo fue defensa personal."
   shadowColor: {r: 0.25490198, g: 0.23529413, b: 0.40000004, a: 1}

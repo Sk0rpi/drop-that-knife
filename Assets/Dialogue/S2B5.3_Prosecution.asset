@@ -12,6 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 754e9f7a79394f348b3fb9edc8dced58, type: 3}
   m_Name: S2B5.3_Prosecution
   m_EditorClassIdentifier: 
-  text_eng: Not only that, but the defendant also ran away...
-  text_nl: Not only that, but the accused also ran away... (NL)
+  text_eng: The police also mentioned that the accused was not at the crime scene
+    anymore. This is an offense called "Unauthorized departure from the scene of
+    an accident".
+  text_nl: De politie heeft aangegeven dat de verdachte nit meer op de plaats delict
+    aanwezig was. Dit is ook een overtreding genaamd "Ongeautoriseerd vertrek van
+    de plaats van een ongeval".
+  text_ger: "Die Polizei und andere Rettungskr\xE4fte erw\xE4hnten, dass der Angeklagte
+    bereits vom Tatort verschwunden war. Dies gilt als Straftat und f\xE4llt unter
+    \"Unerlaubten Verlassen eines Unfallortes\"."
+  text_esp: "La polic\xEDa inform\xF3 de que el acusado no estaba en la escena del
+    crimen. Su ubicaci\xF3n se revel\xF3 m\xE1s tarde."
   shadowColor: {r: 0.32941177, g: 0.05882353, b: 0, a: 1}

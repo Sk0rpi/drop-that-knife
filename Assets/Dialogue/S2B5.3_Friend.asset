@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 754e9f7a79394f348b3fb9edc8dced58, type: 3}
-  m_Name: S2B1_Friend
+  m_Name: S2B5.3_Friend
   m_EditorClassIdentifier: 
-  text_eng: It was you guys!
-  text_nl: Jullie hebben het gedaan!
-  text_ger: Ihr wart es!
-  text_esp: "\xA1Es vuentra culpa!"
-  shadowColor: {r: 0.14117648, g: 0.49411768, b: 0.17254902, a: 1}
+  text_eng: Thanks for that "friend".
+  text_nl: Bedankt voor dat "vriend"
+  text_ger: "VIelen Dank daf\xFCr \"Freund\"."
+  text_esp: Gracias por eso, "amigo".
+  shadowColor: {r: 0.32941177, g: 0.05882353, b: 0, a: 1}

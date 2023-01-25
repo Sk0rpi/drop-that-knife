@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 754e9f7a79394f348b3fb9edc8dced58, type: 3}
   m_Name: S2B1_Mother
   m_EditorClassIdentifier: 
-  text_eng: I can't believe this, son...
-  text_nl: I can't believe this, son... (NL)
+  text_eng: "I can't believe what you done, son\u2026"
+  text_nl: Ik kan niet geloven wat je gedaan hebt...
+  text_ger: "Ich kann nicht glauben, was du getan hast\u2026"
+  text_esp: "No me creo lo que has hecho, cari\xF1o...."
   shadowColor: {r: 0.50980395, g: 0.9058824, b: 0.98823535, a: 1}

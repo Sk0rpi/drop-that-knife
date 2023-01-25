@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 754e9f7a79394f348b3fb9edc8dced58, type: 3}
-  m_Name: S2B1_Friend
+  m_Name: S1B7-Brown
   m_EditorClassIdentifier: 
-  text_eng: It was you guys!
-  text_nl: Jullie hebben het gedaan!
-  text_ger: Ihr wart es!
-  text_esp: "\xA1Es vuentra culpa!"
-  shadowColor: {r: 0.14117648, g: 0.49411768, b: 0.17254902, a: 1}
+  text_eng: Run away or we will hurt you!
+  text_nl: Ga wel of we slaan je in elkaar!
+  text_ger: Lauf weg oder wir schlagen dich!
+  text_esp: "\xA1Salid de aqu\xED u os haremos da\xF1o!"
+  shadowColor: {r: 0.25882354, g: 0.17254902, b: 0.1764706, a: 1}
